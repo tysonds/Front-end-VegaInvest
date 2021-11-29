@@ -6,14 +6,16 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import LoginPg from './pages/LoginPg/LoginPg.js';
 import CreateUser from './pages/CreateUser/CreateUser.js';
 import Questionnaire from './pages/questionnaire/questionnaire.js';
+import Dashboard from './pages/Dashboard/Dashboard.js';
 
 ReactDOM.render(
   <React.StrictMode>
      <Router>
     <Routes>
-      <Route path="/" element={<LoginPg />} />
-      <Route path="/createUser" element={<CreateUser />} />
-      <Route path="question" element={<Questionnaire />} />
+      <Route path="/" exact element={<LoginPg />} />
+      <Route path="/createUser" exact element={<CreateUser />} />
+      <Route path="/question" exact element={<Questionnaire />} />
+      <Route path="/dashboard" exact element={<Dashboard />} />
     </Routes>
   </Router>
   </React.StrictMode>,

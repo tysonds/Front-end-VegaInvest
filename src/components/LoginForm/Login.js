@@ -45,8 +45,10 @@ return (
             <br />
         <a href="">Forgot Password? </a>
         <br />
+        <Link to="/dashboard" style={{ textDecoration: 'none', color: 'black' }}> 
         <Button variant="secondary" className="LoginBtn" id="BtnLogin"> Log In </Button>
         <br />
+        </Link>
         <Link to="/createuser" style={{ textDecoration: 'none', color: 'black' }}> 
         <Button variant="dark" className="LoginBtn" id="SignUp"> 
         Sign Up 
