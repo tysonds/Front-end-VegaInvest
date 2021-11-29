@@ -5,7 +5,6 @@ import Login from '../../components/LoginForm/Login.js';
 function LoginPg() {
   return (
     <div className="LoginPg">
-      yo its jeff
       <LogoHeader />
       <Login />
       
