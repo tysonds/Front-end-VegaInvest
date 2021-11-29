@@ -6,7 +6,6 @@ function LoginPg() {
   return (
     <div className="LoginPg">
       <LogoHeader />
-      Jeff was here! yeah boys
       <Login />
       
     </div>
