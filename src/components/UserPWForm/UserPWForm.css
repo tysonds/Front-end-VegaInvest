@@ -42,8 +42,8 @@ div.form {
 
 .UserPWBtn {
   font-family: Montserrat;
-  color: #eeeeee;
-  background-color: #6f7f88;
+  color: #000000;
+  background-color: #eeeeee;
   margin-bottom: 20px;
   margin-top: 40px;
   font-weight: bold;
@@ -52,7 +52,7 @@ div.form {
   text-align: center;
   width: 50%;
 }
-.userPWBtn:hover {
-  color: #6f7f88;
-  background-color: #eeeeee;
+.UserPWBtn:hover {
+  color: #eeeeee;
+  background-color: #000000;
 }

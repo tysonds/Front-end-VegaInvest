@@ -58,7 +58,7 @@ return (
             name="confirmpassword"
             />
             <br />
-            <Link to="/question" style={{ textDecoration: 'none', color: 'black' }}> 
+            <Link to="/question" style={{ textDecoration: 'none'}}> 
             <Button variant="secondary" className="UserPWBtn"> Create New User </Button>
             </Link>
             </form>    

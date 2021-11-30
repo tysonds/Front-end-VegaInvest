@@ -4,6 +4,37 @@ div.question {
   font-weight: bold;
   font-size: 22px;
   color: #000000;
-  margin-left: 10px;
-  margin-top: 5px;
+  margin-left: 10%;
+  margin-top: 2%;
+}
+.mccontainer {
+  display: flex;
+  margin-left: 10%;
+  margin-top: 5%;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #eeeeee;
+  width: 80%;
+}
+input.formfield {
+  margin-left: 10%;
+  width: 50%;
+}
+.pBtn {
+  margin-top: 4%;
+  margin-left: 30%;
+  width: 30%;
+  margin-bottom: 2%;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 27px;
+  color: #000000;
+  background-color: #eeeeee;
+}
+
+.pBtn:hover {
+  color: #eeeeee;
+  background-color: #000000;
 }
