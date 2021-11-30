@@ -15,6 +15,16 @@ const Userqone = () => {
     }
 );
 
+const handleGoalChange = (event) => {
+    setValues({...values, goal: event.target.value})
+}
+const handleHorizonChange = (event) => {
+    setValues({...values, horizon: event.target.value})
+}
+const handleNameChange = (event) => {
+    setValues({...values, name: event.target.value})
+}
+
 return (
   <form>
  <div className="mccontainer"> 
@@ -26,6 +36,7 @@ return (
   2. What is your investment goal?
   </div>
  <input
+            onChange={handleGoalChange}
             value={values.goal}
             className="formfield"
             placeholder="Enter the amount in $"
@@ -35,6 +46,7 @@ return (
     3. What is your investment horizon?
     </div>
     <input
+            onChange={handleHorizonChange}
             value={values.horizon}
             className="formfield"
             placeholder="Enter the horizon in years"
@@ -44,6 +56,7 @@ return (
    4. What would you like to name this portfolio? 
     </div>
   <input
+            onChange={handleNameChange}
             value={values.name}
             className="formfield"
             placeholder="Enter a portfolio name"
