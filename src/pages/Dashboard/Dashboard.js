@@ -11,9 +11,11 @@ const Dashboard = () => {
    <div> 
      <Dashhead> </Dashhead>
    </div>
+   <div className="Dashcolcontain">
    <div className="Dashrowcontain">
       <PortfolioGraph></PortfolioGraph>
    </div> 
+   </div>
 
 
   </div>
