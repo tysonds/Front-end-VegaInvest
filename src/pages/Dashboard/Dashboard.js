@@ -23,8 +23,8 @@ const Dashboard = () => {
    <div className="Dashrowcontain">
      <Card style={{ width: '14rem' }} id="PortCard">
   <Card.Body>
-    <Card.Title> "Retirement" </Card.Title>
-    <Card.Text>
+    <Card.Title id="Title"> "Retirement" </Card.Title>
+    <Card.Text id="Title">
       $60,531 
     </Card.Text>
     <Link to="/portfoliosum" style={{ textDecoration: 'none', color: 'black' }}>
@@ -34,8 +34,8 @@ const Dashboard = () => {
 </Card>
 <Card style={{ width: '14rem' }} id="PortCard">
   <Card.Body>
-    <Card.Title> "Education" </Card.Title>
-    <Card.Text>
+    <Card.Title id="Title"> "Education" </Card.Title>
+    <Card.Text id="Title">
       $19,529
     </Card.Text>
     <Link to="/portfoliosum" style={{ textDecoration: 'none', color: 'black' }}>
