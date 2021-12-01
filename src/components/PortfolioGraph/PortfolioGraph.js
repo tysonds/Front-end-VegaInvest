@@ -19,16 +19,19 @@ const PortfolioGraph = () => {
                 fill: 'tozeroy'
                 }]}
             layout={ 
-                {
+                {    
                 paper_bgcolor:'rgba(0,0,0,0)',
                 plot_bgcolor:"white",    
                 title: 'Portfolio Graph',
+                font_color:"white",
                 xaxis: {
+                  tickfont:{color:"white",size:16},  
                   linecolor:"#BCCCDC", 
                   showgrid:false,  
                   autorange: true,
                   range: ["2019-09-01", "2018-11-01"],
-                  rangeselector: {buttons: [
+                  rangeselector: {
+                      buttons: [
                       {
                         count: 1,
                         label: '1m',
@@ -52,11 +55,14 @@ const PortfolioGraph = () => {
                     type:'date'
                 },
                 yaxis: {  
+                  tickfont:{color:"white",size:16},
                   linecolor:"#BCCCDC",  
                   gridcolor:"black", 
                   autorange: true,
                   range: [86.8700008333, 138.870004167],
-                  type: 'linear',
+                  tickprefix:"$",
+                  tickformat:",.",
+                  side:"right"
                 }} }
             />
         </div>
