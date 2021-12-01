@@ -23,8 +23,8 @@ const PortfolioGraph = () => {
             layout={{ 
                 title:{text:"Total of all Portfolio Values: $1000"},
                 titlefont:{size:20,font_family:"Montserrat",color:'black'},
-                width: 800,
-                height: 500,  
+                width: 650,
+                height: 400,  
                 paper_bgcolor:'white',
                 plot_bgcolor:"white",    
                 font_color:"white",
