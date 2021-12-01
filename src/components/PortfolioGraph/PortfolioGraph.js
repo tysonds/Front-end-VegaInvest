@@ -14,6 +14,9 @@ const PortfolioGraph = () => {
                 {
                 x: ['2012-09-01', '2016-09-02', '2018-04-03','2018-09-03'],
                 y: [202, 500, 303, 300],
+                hovertemplate:  '<br><b>X</b>: %{x}<br>' +
+                                '<i>Price</i>: $%{y:.2f}' +
+                                '<b>%{text}</b>',
                 type: 'linear',
                 line:{width:5,color:"#0645AD"},
                 fill: 'tozeroy'
@@ -29,7 +32,7 @@ const PortfolioGraph = () => {
                   linecolor:"#BCCCDC", 
                   showgrid:false,  
                   autorange: true,
-                  range: ["2019-09-01", "2018-11-01"],
+                  range: ["2014-09-01", "2018-11-01"],
                   rangeselector: {
                       buttons: [
                       {
@@ -50,7 +53,8 @@ const PortfolioGraph = () => {
                         step: 'month',
                         stepmode: 'backward'
                       },
-                      {step: 'all'}
+                      {step: 'all',
+                       stepmode:'backward'}
                     ]},
                     type:'date'
                 },
