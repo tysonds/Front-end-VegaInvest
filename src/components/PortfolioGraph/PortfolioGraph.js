@@ -15,7 +15,8 @@ const PortfolioGraph = () => {
                 x: ['2012-09-01', '2016-09-02', '2018-04-03','2018-09-03'],
                 y: [202, 500, 303, 300],
                 type: 'linear',
-                line:{width:10,color:"#0645AD"},
+                line:{width:5,color:"#0645AD"},
+                fill: 'tozeroy'
                 }]}
             layout={ 
                 {
