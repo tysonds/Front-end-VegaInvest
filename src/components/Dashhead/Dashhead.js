@@ -13,7 +13,7 @@ return (
      <img alt="logo" src={Vegalogo} height='50px' width='75px' />
      </div>
      <div> 
-     <DropdownButton id="dropdown-basic-button" title="tysonds99" id="dropBtn" variant="secondary">
+     <DropdownButton style={{height: '50px'}}id="dropdown-basic-button" title="tysonds99" id="dropBtn" variant="secondary">
        
     <Dropdown.Item href="/"> Logout  </Dropdown.Item>
     <Dropdown.Item  href="/question">  Edit portfolio details </Dropdown.Item>
