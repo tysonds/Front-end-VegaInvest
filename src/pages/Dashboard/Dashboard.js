@@ -27,7 +27,9 @@ const Dashboard = () => {
     <Card.Text>
       $10,000 
     </Card.Text>
+    <Link to="/portfoliosum" style={{ textDecoration: 'none', color: 'black' }}>
     <Button variant="primary" style={{color: '#000000', fontFamily: 'Montserrat', backgroundColor: '#ABDDFC', fontWeight: '800'}}> View </Button>
+    </Link>
   </Card.Body>
 </Card>
 <Card style={{ width: '14rem' }} id="PortCard">
@@ -36,7 +38,9 @@ const Dashboard = () => {
     <Card.Text>
       $10,000
     </Card.Text>
+    <Link to="/portfoliosum" style={{ textDecoration: 'none', color: 'black' }}>
     <Button variant="primary" style={{color: '#000000', fontFamily: 'Montserrat', backgroundColor: '#ABDDFC', fontWeight: '800'}}> View </Button>
+    </Link>
   </Card.Body>
 </Card>
 <div ClassName="Dashcolcontain">
