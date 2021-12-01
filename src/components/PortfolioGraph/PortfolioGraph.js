@@ -14,10 +14,10 @@ const PortfolioGraph = () => {
                 {
                 x: ['2012-09-01', '2016-09-02', '2018-04-03','2018-09-03'],
                 y: [202, 500, 303, 300],
-                hovertemplate:  '%{x}<br>' +
-                                '$%{y:.2f}',
+                hovertemplate:  '%{x}<br>' +'$%{y:.2f}' +'<extra></extra>',
                 type: 'linear',
                 line:{width:5,color:"#0645AD"},
+                marker: { size: 9, color:'#ABDDFC', line:{width:1,color:'grey'} },
                 fill: 'tozeroy'
                 }]}
             layout={ 
