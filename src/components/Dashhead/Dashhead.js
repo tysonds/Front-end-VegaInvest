@@ -3,7 +3,6 @@ import Vegalogo from './VegaLogoCon.jpeg'
 import './Dashhead.css'
 import {DropdownButton, Dropdown} from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { Link } from 'react-router-dom'
 
 const Dashhead = () => {
 
@@ -16,8 +15,8 @@ return (
      <div> 
      <DropdownButton id="dropdown-basic-button" title="tysonds99" id="dropBtn" variant="secondary">
        
-    <Dropdown.Item> <Link to="/" style={{ textDecoration: 'none', color: '#000000'}}> Logout </Link> </Dropdown.Item>
-    <Dropdown.Item > <Link to="/question" style={{ textDecoration: 'none', color: '#000000'}}> Edit portfolio details </Link></Dropdown.Item>
+    <Dropdown.Item href="/"> Logout  </Dropdown.Item>
+    <Dropdown.Item  href="/question">  Edit portfolio details </Dropdown.Item>
     </DropdownButton>
     </div>
     </div>

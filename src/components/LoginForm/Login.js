@@ -39,6 +39,7 @@ return (
             onChange={handlePasswordInputChange}
             values={values.password}
             className="form-field"
+            type="password"
             placeholder="Enter Your Password"
             name="password"
             />

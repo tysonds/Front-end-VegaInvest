@@ -48,6 +48,7 @@ return (
             className="form-field"
             placeholder="Enter A 7+ character Password"
             name="password"
+            type="password"
             />
             <br />
             <input
@@ -56,6 +57,7 @@ return (
             className="form-field"
             placeholder="Confirm Password"
             name="confirmpassword"
+            type="password"
             />
             <br />
             <Link to="/question" style={{ textDecoration: 'none'}}> 
