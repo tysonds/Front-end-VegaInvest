@@ -11,9 +11,16 @@ const Dashboard = () => {
    <div> 
      <Dashhead> </Dashhead>
    </div>
+<<<<<<< Updated upstream
 
    <div className="Dashrowcontain">
       <PortfolioGraph></PortfolioGraph>
+=======
+      <PortfolioGraph>const startdate='2014-02-17'
+        const enddate = "2017-02-16" </PortfolioGraph>
+   <div> 
+   This is the Dashboard
+>>>>>>> Stashed changes
    </div>
 
   </div>
