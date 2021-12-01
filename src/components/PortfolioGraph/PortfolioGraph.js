@@ -17,8 +17,12 @@ const PortfolioGraph = () => {
                 type: 'linear',
                 }]}
             layout={ 
-                {title: 'Portfolio Graph',
+                {
+                plot_bgcolor:"#FFFFFF",    
+                title: 'Portfolio Graph',
                 xaxis: {
+                  linecolor:"#BCCCDC", 
+                  showgrid:false,  
                   autorange: true,
                   range: ["2019-09-01", "2018-11-01"],
                   rangeselector: {buttons: [
@@ -42,11 +46,13 @@ const PortfolioGraph = () => {
                       },
                       {step: 'all'}
                     ]},
+                    type:'date'
                 },
                 yaxis: {
+                  linecolor:"#BCCCDC",   
                   autorange: true,
                   range: [86.8700008333, 138.870004167],
-                  type: 'linear'
+                  type: 'linear',
                 }} }
             />
         </div>
