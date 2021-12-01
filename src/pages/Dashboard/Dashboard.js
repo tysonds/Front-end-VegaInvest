@@ -7,14 +7,15 @@ import PortfolioGraph from '../../components/PortfolioGraph/PortfolioGraph'
 const Dashboard = () => {
 
   return(
- <div className="Dashbd"> 
+ <div className="Dashbd">  
    <div> 
      <Dashhead> </Dashhead>
    </div>
+
+   <div className="Dashrowcontain">
       <PortfolioGraph></PortfolioGraph>
-   <div> 
-   This is the Dashboard
    </div>
+
   </div>
   );
 
