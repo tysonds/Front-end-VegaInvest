@@ -14,7 +14,6 @@ const Dashboard = () => {
    <div className="Dashrowcontain">
       <PortfolioGraph></PortfolioGraph>
    </div> 
-   This is the Dashboard
 
 
   </div>
