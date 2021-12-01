@@ -15,10 +15,11 @@ const PortfolioGraph = () => {
                 x: ['2012-09-01', '2016-09-02', '2018-04-03','2018-09-03'],
                 y: [202, 500, 303, 300],
                 type: 'linear',
+                linecolor:"#0645AD"
                 }]}
             layout={ 
                 {
-                plot_bgcolor:"#FFFFFF",    
+                plot_bgcolor:"rgba(76, 175, 80, 0.1)",    
                 title: 'Portfolio Graph',
                 xaxis: {
                   linecolor:"#BCCCDC", 
