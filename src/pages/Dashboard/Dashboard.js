@@ -25,7 +25,7 @@ const Dashboard = () => {
   <Card.Body>
     <Card.Title> "Retirement" </Card.Title>
     <Card.Text>
-      $10,000 
+      $60,531 
     </Card.Text>
     <Link to="/portfoliosum" style={{ textDecoration: 'none', color: 'black' }}>
     <Button variant="primary" style={{color: '#000000', fontFamily: 'Montserrat', backgroundColor: '#ABDDFC', fontWeight: '800'}}> View </Button>
@@ -36,7 +36,7 @@ const Dashboard = () => {
   <Card.Body>
     <Card.Title> "Education" </Card.Title>
     <Card.Text>
-      $10,000
+      $19,529
     </Card.Text>
     <Link to="/portfoliosum" style={{ textDecoration: 'none', color: 'black' }}>
     <Button variant="primary" style={{color: '#000000', fontFamily: 'Montserrat', backgroundColor: '#ABDDFC', fontWeight: '800'}}> View </Button>
