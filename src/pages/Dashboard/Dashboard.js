@@ -7,6 +7,7 @@ import Footer from '../../components/Footer/Footer';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {Link} from 'react-router-dom';
 
 const Dashboard = () => {
 
@@ -24,24 +25,29 @@ const Dashboard = () => {
   <Card.Body>
     <Card.Title> "Retirement" </Card.Title>
     <Card.Text>
-      $10,000 
+      $60,531 
     </Card.Text>
-    <Button variant="primary"> View </Button>
+    <Link to="/portfoliosum" style={{ textDecoration: 'none', color: 'black' }}>
+    <Button variant="primary" style={{color: '#000000', fontFamily: 'Montserrat', backgroundColor: '#ABDDFC', fontWeight: '800'}}> View </Button>
+    </Link>
   </Card.Body>
 </Card>
 <Card style={{ width: '14rem' }} id="PortCard">
   <Card.Body>
     <Card.Title> "Education" </Card.Title>
     <Card.Text>
-      $10,000
+      $19,529
     </Card.Text>
-    <Button variant="primary"> View </Button>
+    <Link to="/portfoliosum" style={{ textDecoration: 'none', color: 'black' }}>
+    <Button variant="primary" style={{color: '#000000', fontFamily: 'Montserrat', backgroundColor: '#ABDDFC', fontWeight: '800'}}> View </Button>
+    </Link>
   </Card.Body>
 </Card>
 <div ClassName="Dashcolcontain">
-  
+<Link to="/question" style={{ textDecoration: 'none', color: 'black' }}>
 <Button variant="primary" style={{height: '40%', color: '#000000', fontFamily: 'Montserrat',
-fontStyle: 'bold' , width: '14rem', backgroundColor: '#ABDDFC', fontWeight: '800', marginTop:'25%'}}> Create New Portfolio </Button>
+fontStyle: 'normal' , width: '14rem', backgroundColor: '#ABDDFC', fontWeight: '800', marginTop:'25%'}}> Create New Portfolio </Button>
+</Link> 
 </div>
      </div> 
    </div>
