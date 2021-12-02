@@ -25,18 +25,7 @@ const Dashboard = () => {
   <Card.Body>
     <Card.Title id="Title"> "Retirement" </Card.Title>
     <Card.Text id="Title">
-      $60,531 
-    </Card.Text>
-    <Link to="/portfoliosum" style={{ textDecoration: 'none', color: 'black' }}>
-    <Button variant="primary" style={{color: '#000000', fontFamily: 'Montserrat', backgroundColor: '#ABDDFC', fontWeight: '800'}}> View </Button>
-    </Link>
-  </Card.Body>
-</Card>
-<Card style={{ width: '14rem' }} id="PortCard">
-  <Card.Body>
-    <Card.Title id="Title"> "Education" </Card.Title>
-    <Card.Text id="Title">
-      $19,529
+      $1000 (15.9% return)
     </Card.Text>
     <Link to="/portfoliosum" style={{ textDecoration: 'none', color: 'black' }}>
     <Button variant="primary" style={{color: '#000000', fontFamily: 'Montserrat', backgroundColor: '#ABDDFC', fontWeight: '800'}}> View </Button>
@@ -46,7 +35,7 @@ const Dashboard = () => {
 <div ClassName="Dashcolcontain">
 <Link to="/question" style={{ textDecoration: 'none', color: 'black' }}>
 <Button variant="primary" style={{height: '40%', color: '#000000', fontFamily: 'Montserrat',
-fontStyle: 'normal' , width: '14rem', backgroundColor: '#ABDDFC', fontWeight: '800', marginTop:'25%'}}> Create New Portfolio </Button>
+fontStyle: 'normal' , width: '14rem', backgroundColor: '#ABDDFC', fontWeight: '800', marginTop:'25%'}}> Edit Portfolio Details </Button>
 </Link> 
 </div>
      </div> 
