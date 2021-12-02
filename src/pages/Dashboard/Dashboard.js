@@ -8,6 +8,7 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Link} from 'react-router-dom';
+import Table from 'react-bootstrap/Table'
 
 const Dashboard = () => {
 
@@ -19,24 +20,34 @@ const Dashboard = () => {
    <div className="Dashcolcontain">
    <div className="Dashrowcontain">
       <PortfolioGraph></PortfolioGraph>
+      <div className="tb"> 
+      <Table id="table" striped bordered hover size="sm">
+  <thead>
+    <tr>
+      <th>Portfolio Statistic</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> Annualized Return </td>
+      <td> 18.3 % </td>
+    </tr>
+    <tr>
+      <td> Annualized Volatility </td>
+      <td> 7.3% </td>
+    </tr>
+    <tr>
+      <td> Annualized Sharpe Ratio </td>
+      <td>23.09% </td>
+    </tr>
+  </tbody>
+</Table>
+</div>
    </div>
    <div className="Dashrowcontain">
-     <Card style={{ width: '14rem' }} id="PortCard">
-  <Card.Body>
-    <Card.Title id="Title"> "Retirement" </Card.Title>
-    <Card.Text id="Title">
-      $1000 (15.9% return)
-    </Card.Text>
-    <Link to="/portfoliosum" style={{ textDecoration: 'none', color: 'black' }}>
-    <Button variant="primary" style={{color: '#000000', fontFamily: 'Montserrat', backgroundColor: '#ABDDFC', fontWeight: '800'}}> View </Button>
-    </Link>
-  </Card.Body>
-</Card>
+  
 <div ClassName="Dashcolcontain">
-<Link to="/question" style={{ textDecoration: 'none', color: 'black' }}>
-<Button variant="primary" style={{height: '40%', color: '#000000', fontFamily: 'Montserrat',
-fontStyle: 'normal' , width: '14rem', backgroundColor: '#ABDDFC', fontWeight: '800', marginTop:'25%'}}> Edit Portfolio Details </Button>
-</Link> 
 </div>
      </div> 
    </div>
