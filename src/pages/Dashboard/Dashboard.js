@@ -46,7 +46,7 @@ const Dashboard = () => {
 <div ClassName="Dashcolcontain">
 <Link to="/question" style={{ textDecoration: 'none', color: 'black' }}>
 <Button variant="primary" style={{height: '40%', color: '#000000', fontFamily: 'Montserrat',
-fontStyle: 'normal' , width: '14rem', backgroundColor: '#ABDDFC', fontWeight: '800', marginTop:'45%'}}> Create New Portfolio </Button>
+fontStyle: 'normal' , width: '14rem', backgroundColor: '#ABDDFC', fontWeight: '800', marginTop:'25%'}}> Create New Portfolio </Button>
 </Link> 
 </div>
      </div> 
