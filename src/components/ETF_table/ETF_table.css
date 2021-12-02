@@ -9,6 +9,7 @@
 .tb {
   margin-left: 1%;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 .rowcontain {
   display: flex;
