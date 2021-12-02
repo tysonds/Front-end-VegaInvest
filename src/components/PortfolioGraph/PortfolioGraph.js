@@ -25,8 +25,8 @@ const PortfolioGraph = () => {
             layout={{ 
                 title:{text:"Portfolio Value: $1000.00"},
                 titlefont:{size:20,font_family:"Montserrat",color:'black'},
-                width: 600,
-                height: 350,  
+                width: 575,
+                height: 325,  
                 paper_bgcolor:'white',
                 plot_bgcolor:"white",    
                 font_color:"white",
