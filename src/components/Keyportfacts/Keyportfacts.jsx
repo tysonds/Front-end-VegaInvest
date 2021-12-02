@@ -26,10 +26,10 @@ return (
         </div>
         <div className="KeyRow">
             <Link to="/portfoliosum" style={{ textDecoration: 'none'}}> 
-            <Button variant="primary"> View Portfolio Holdings </Button>
+            <Button id="KeyHoldBtn" variant="primary"> View Portfolio Holdings </Button>
             </Link> 
             <Link to="/question" style={{ textDecoration: 'none'}}>
-            <Button variant="secondary"> Edit Portfolio Details </Button> 
+            <Button id="KeyDetBtn" variant="secondary"> Edit Portfolio Details </Button> 
             </Link>
         </div>
     
