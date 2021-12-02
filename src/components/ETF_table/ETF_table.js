@@ -10,6 +10,9 @@ const ETF = [
     {ticker: "GAMR", value:"$1000.98", shares:"3", weight: "2.29%"},
     {ticker: "QLNC", value:"$1300.98", shares:"4", weight: "2.00%"},
     {ticker: "SPY", value:"$1100.98", shares:"14", weight: "2.1%"},
+    {ticker: "SPY", value:"$1100.98", shares:"14", weight: "2.1%"},
+    {ticker: "SPY", value:"$1100.98", shares:"14", weight: "2.1%"},
+    {ticker: "SPY", value:"$1100.98", shares:"14", weight: "2.1%"},
 ]
 
     const renderETF=(ETF,index)=> {
@@ -24,9 +27,10 @@ const ETF = [
     }
 
     return(
-            <div className="Dashrowcontain">
-            <div className="Dashcolcontain">
+            <div className="rowcontain">
+            <div className="colcontain">
             <div className="tb">
+            <div className="table">
             <ReactBootStrap.Table striped bordered hover>
             <thead>
                 <tr>
@@ -39,7 +43,12 @@ const ETF = [
             <tbody>
                 {ETF.map(renderETF)}
             </tbody>
-            </ReactBootStrap.Table> </div> </div> </div>
+            </ReactBootStrap.Table> 
+            </div> 
+            </div> 
+            </div>
+            </div> 
+    
             );
 }
 export default ETF_table;
