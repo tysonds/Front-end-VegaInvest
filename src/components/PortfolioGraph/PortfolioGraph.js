@@ -23,23 +23,21 @@ const PortfolioGraph = () => {
                 fill: 'tozeroy'
                 }]}
             layout={{ 
+              margin:{l:0, r:0, b:30, t:40, pad:1},
                 title:{text:"Portfolio Value: $1000.00"},
-                titlefont:{size:20,font_family:"Montserrat",color:'black'},
+                titlefont:{size:15,family:"Montserrat",color:'black', weight: '800'},
                 width: 600,
                 height: 350,  
                 paper_bgcolor:'white',
                 plot_bgcolor:"white",    
                 font_color:"white",
-                xaxis: {
-                  linecolor: 'black',
-                  linewidth:3,
-                  mirror: true,  
+                xaxis: {  
                   tickfont:{color:'rgba(0,0,0,0)',size:16},   
                   showgrid:false,  
                   autorange: true,
                   range: ["2014-09-01", "2018-11-01"],
                   rangeselector: {
-                      y:-0.1,
+                      y:-0.085,
                       x:0.35,
                       buttons: [
                       {
@@ -69,15 +67,13 @@ const PortfolioGraph = () => {
                         stepmode: 'backward'
                       },
                       {step: 'all',
+                        label: 'ALL',
                        stepmode:'backward'}
                     ]},
                     type:'date'
                 },
-                yaxis: {  
-                  linecolor: 'black',
-                  linewidth: 5,
-                  mirror: true,  
-                  tickfont:{color:"black",size:14},   
+                yaxis: {   
+                  tickfont:{color:"rgba(0,0,0,0)",size:14},   
                   showgrid:false,
                   autorange: true,
                   range: [86.8700008333, 138.870004167],
