@@ -7,13 +7,16 @@
   width: 60%;
   margin-bottom: 1%;
   font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
 }
 .KeyRow {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  margin-bottom: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1 rem;
 }
+
 .Title {
   font-weight: 800;
   text-decoration: underline;
