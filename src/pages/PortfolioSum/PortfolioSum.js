@@ -12,7 +12,7 @@ const PortfolioSum = () => {
   return(
  <div className="Portsum"> 
 <Porthead> </Porthead>
-      <ETF_table> </ETF_table>
+      <ETF_table></ETF_table>
   </div>
   );
 
