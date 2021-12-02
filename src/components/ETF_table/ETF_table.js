@@ -6,25 +6,27 @@ import './ETF_table.css'
 const ETF_table = () => { 
     
 const ETF = [
-    {Ticker: "BBC", Value:"$5430.98", Shares:"2", Weight: "18.29%"},
-    {Ticker: "GAMR", Value:"$1000.98", Shares:"3", Weight: "2.29%"},
-    {Ticker: "QLNC", Value:"$1300.98", Shares:"4", Weight: "2.00%"},
-    {Ticker: "GAMR", Value:"$1100.98", Shares:"14", Weight: "2.1%"},
+    {ticker: "BBC", value:"$5430.98", shares:"2", weight: "18.29%"},
+    {ticker: "GAMR", value:"$1000.98", shares:"3", weight: "2.29%"},
+    {ticker: "QLNC", value:"$1300.98", shares:"4", weight: "2.00%"},
+    {ticker: "SPY", value:"$1100.98", shares:"14", weight: "2.1%"},
 ]
 
-    const ETF_render=(ETF,index)=> {
+    const renderETF=(ETF,index)=> {
     return(
         <tr key={index}>
-            <td>{ETF.Ticker}</td>
-            <td>{ETF.Value}</td>
-            <td>{ETF.Shares}</td>
-            <td>{ETF.Weight}</td>
+            <td>{ETF.ticker}</td>
+            <td>{ETF.value}</td>
+            <td>{ETF.shares}</td>
+            <td>{ETF.weight}</td>
         </tr>
         )
     }
 
     return(
-            <div className="tablefit">
+            <div className="Dashrowcontain">
+            <div className="Dashcolcontain">
+            <div className="tb">
             <ReactBootStrap.Table striped bordered hover>
             <thead>
                 <tr>
@@ -35,11 +37,9 @@ const ETF = [
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                {ETF.map(ETF_render)}
-                </tr>
+                {ETF.map(renderETF)}
             </tbody>
-            </ReactBootStrap.Table> </div>
+            </ReactBootStrap.Table> </div> </div> </div>
             );
 }
 export default ETF_table;
