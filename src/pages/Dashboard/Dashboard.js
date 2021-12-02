@@ -18,9 +18,11 @@ const Dashboard = () => {
    <div> 
      <Dashhead> </Dashhead>
    </div>
-   <div className="Dashcolcontain">
+
    <div className="Dashrowcontain">
-      <PortfolioGraph></PortfolioGraph>
+      <div> <PortfolioGraph></PortfolioGraph> </div>
+
+    <div className="Dashcolcontain">
       <div className="tb"> 
       <Table id="table" striped bordered hover size="sm">
   <thead>
@@ -45,11 +47,9 @@ const Dashboard = () => {
   </tbody>
 </Table>
 </div>
-   </div>
-   <div className="Dashrowcontain">
-  
+   
 <Keyportfacts> </Keyportfacts>
-</div> 
+</div>
    </div>
    <div>
    <Footer> </Footer>
