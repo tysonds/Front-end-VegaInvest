@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import './PortfolioSum.css';
-import Footer from '../../components/Footer/Footer';
+import Porthead from '../../components/Porthead/Porthead';
 
 
 const PortfolioSum = () => {
 
   return(
  <div className="Portsum"> 
-<Footer> </Footer>
+<Porthead> </Porthead>
   </div>
   );
 
