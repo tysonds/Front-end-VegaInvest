@@ -9,6 +9,7 @@ import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Link} from 'react-router-dom';
 import Table from 'react-bootstrap/Table'
+import Keyportfacts from '../../components/Keyportfacts/Keyportfacts.jsx';
 
 const Dashboard = () => {
 
@@ -47,9 +48,8 @@ const Dashboard = () => {
    </div>
    <div className="Dashrowcontain">
   
-<div ClassName="Dashcolcontain">
-</div>
-     </div> 
+<Keyportfacts> </Keyportfacts>
+</div> 
    </div>
    <div>
    <Footer> </Footer>

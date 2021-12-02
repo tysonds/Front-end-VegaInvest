@@ -1,0 +1,7 @@
+.KeyContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+}
