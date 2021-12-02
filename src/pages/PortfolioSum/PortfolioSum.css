@@ -6,3 +6,26 @@
   height: 100%;
   background-color: #b2bfc2;
 }
+.PortsumContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 625px;
+}
+
+.PortsumTitle {
+  text-align: center;
+  font-weight: 800;
+  text-decoration: underline;
+  font-size: 50px;
+  color: #0645ad;
+}
+#Portsumbtn {
+  margin-left: 30%;
+  width: 40%;
+  height: 5rem;
+  font-size: 1.25rem;
+  background-color: #abddfc;
+  color: #000000;
+  font-weight: 800;
+}

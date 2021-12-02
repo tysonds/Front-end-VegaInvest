@@ -18,7 +18,7 @@ return (
      <DropdownButton id="dropdown-basic-button" title="tysonds99" id="dropBtn" variant="secondary">
        
     <Dropdown.Item href="/"> Logout  </Dropdown.Item>
-    <Dropdown.Item  href="/editquestion">  Edit portfolio details </Dropdown.Item>
+    <Dropdown.Item  href="/editquestion">  Edit Portfolio Details </Dropdown.Item>
     </DropdownButton>
     </div>
     </div>

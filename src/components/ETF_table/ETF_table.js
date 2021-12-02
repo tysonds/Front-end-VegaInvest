@@ -6,13 +6,22 @@ import './ETF_table.css'
 const ETF_table = () => { 
     
 const ETF = [
-    {ticker: "BBC", description:"Tracks the S&P500 stock market index of large and mid-cap US stocks",shares:"2", value:"$5430.98", weight: "18.29%"},
-    {ticker: "GAMR", description:"Tracks the S&P500 stock market index of large and mid-cap US stocks", shares:"3",value:"$1000.98", weight: "2.29%"},
+    {ticker: "BBC", description:"Tracks the LifeSci Biotechnology Clinical Trials Index, which tracks the performance of select clinical trials stage biotechnology companies",shares:"2", value:"$5430.98", weight: "18.29%"},
+    {ticker: "GAMR", description:"Tracks the First Trust NASDAQ Clean Edge Green Energy (Alternative Energy) Index", shares:"3",value:"$1000.98", weight: "2.29%"},
     {ticker: "QLNC", description:"Tracks the S&P500 stock market index of large and mid-cap US stocks", shares:"4",value:"$1300.98", weight: "2.00%"},
     {ticker: "SPY", description:"Tracks the S&P500 stock market index of large and mid-cap US stocks", shares:"14",value:"$1100.98", weight: "2.1%"},
+    {ticker: "XIC", description:"Tracks the S&P500 stock market index of large and mid-cap US stocks", shares:"14",value:"$1100.98", weight: "2.1%"},
+    {ticker: "XEF", description:"Tracks the S&P500 stock market index of large and mid-cap US stocks", shares:"14",value:"$1100.98", weight: "2.1%"},
+    {ticker: "ITOT", description:"Tracks the S&P500 stock market index of large and mid-cap US stocks", shares:"14",value:"$1100.98", weight: "2.1%"},
     {ticker: "SPY", description:"Tracks the S&P500 stock market index of large and mid-cap US stocks", shares:"14",value:"$1100.98", weight: "2.1%"},
     {ticker: "SPY", description:"Tracks the S&P500 stock market index of large and mid-cap US stocks", shares:"14",value:"$1100.98", weight: "2.1%"},
     {ticker: "SPY", description:"Tracks the S&P500 stock market index of large and mid-cap US stocks", shares:"14",value:"$1100.98", weight: "2.1%"},
+    {ticker: "SPY", description:"Tracks the S&P500 stock market index of large and mid-cap US stocks", shares:"14",value:"$1100.98", weight: "2.1%"},
+    {ticker: "SPY", description:"Tracks the S&P500 stock market index of large and mid-cap US stocks", shares:"14",value:"$1100.98", weight: "2.1%"},
+    {ticker: "SPY", description:"Tracks the S&P500 stock market index of large and mid-cap US stocks", shares:"14",value:"$1100.98", weight: "2.1%"},
+    {ticker: "SPY", description:"Tracks the S&P500 stock market index of large and mid-cap US stocks", shares:"14",value:"$1100.98", weight: "2.1%"},
+    {ticker: "SPY", description:"Tracks the S&P500 stock market index of large and mid-cap US stocks", shares:"14",value:"$1100.98", weight: "2.1%"},
+
 ]
 
     const renderETF=(ETF,index)=> {
@@ -32,14 +41,14 @@ const ETF = [
             <div className="colcontain">
             <div className="tb">
             <div className="table">
-            <ReactBootStrap.Table striped bordered hover variant="dark">
+            <ReactBootStrap.Table style={{background: "#F1F1F1"}}>
             <thead>
                 <tr>
                 <th>Ticker</th>
                 <th>Description</th>
                 <th>Value</th>
                 <th>Shares</th>
-                <th>% of Account</th>
+                <th>% of Portfolio </th>
                 </tr>
             </thead>
             <tbody>

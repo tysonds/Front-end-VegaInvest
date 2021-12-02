@@ -54,8 +54,6 @@ const Dashboard = () => {
    <div>
    <Footer> </Footer>
    </div>
-
-
   </div>
   );
 
