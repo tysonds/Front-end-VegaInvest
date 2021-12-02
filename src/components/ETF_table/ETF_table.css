@@ -6,6 +6,10 @@
   border: 1px solid #000000;
 }
 
+#TB {
+  background: grey;
+}
+
 .tb {
   margin-left: 1%;
   overflow-y: auto;

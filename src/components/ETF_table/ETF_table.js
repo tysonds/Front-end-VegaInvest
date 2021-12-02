@@ -32,7 +32,7 @@ const ETF = [
             <div className="colcontain">
             <div className="tb">
             <div className="table">
-            <ReactBootStrap.Table striped bordered hover>
+            <ReactBootStrap.Table striped bordered hover variant="dark">
             <thead>
                 <tr>
                 <th>Ticker</th>
