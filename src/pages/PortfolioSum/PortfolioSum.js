@@ -5,6 +5,7 @@ import ETF_table from '../../components/ETF_table/ETF_table';
 import Footer from '../../components/Footer/Footer';
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {Link} from 'react-router-dom'
 
 
 
@@ -20,7 +21,9 @@ const PortfolioSum = () => {
 <ETF_table></ETF_table>
 </div>
 <div>
+  <Link to="/editquestion" style={{ textDecoration: 'none', color: 'black' }}> 
   <Button variant="primary" id="Portsumbtn" > Edit Portolio Details  </Button>
+  </Link> 
 </div>
 </div>
 <Footer> </Footer>
