@@ -1,5 +1,6 @@
 import Plotly from 'plotly.js-basic-dist';
 import createPlotlyComponent from "react-plotly.js/factory";
+import react, { useState } from 'react';
 const Plot = createPlotlyComponent(Plotly);
 
 
