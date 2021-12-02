@@ -9,7 +9,7 @@ const Keyportfacts = () => {
 return (
 
     <div className="KeyContainer">
-        <div className="KeyRow">
+        <div className>
             <div className="Title"> 
             Key Portfolio Facts
             </div>

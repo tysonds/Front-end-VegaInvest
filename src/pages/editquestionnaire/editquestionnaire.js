@@ -1,15 +1,15 @@
 import react, { useState } from 'react'
 import LogoHeader from '../../components/LogoHeader/LogoHeader.js';
-import Userqone from '../../components/userqone/userqone';
+import Edituserqone from '../../components/edituserqone/edituserqone';
 
-const Questionnaire = () => {
+const Editquestionnaire = () => {
 
 return (
  <div> 
    <LogoHeader />
-   <Userqone />
+   <Edituserqone />
     </div>
   );
 
 }
-export default Questionnaire
+export default Editquestionnaire
