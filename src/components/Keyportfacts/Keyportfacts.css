@@ -6,6 +6,7 @@
   border: 1px solid #000000;
   width: 60%;
   margin-bottom: 1%;
+  font-family: "Montserrat", sans-serif;
 }
 .KeyRow {
   display: flex;
