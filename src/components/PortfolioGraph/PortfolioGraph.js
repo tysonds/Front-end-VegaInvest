@@ -1,6 +1,7 @@
 import Plotly from 'plotly.js-basic-dist';
 import createPlotlyComponent from "react-plotly.js/factory";
 import react, { useState } from 'react';
+import './PortfolioGraph.css';
 const Plot = createPlotlyComponent(Plotly);
 
 
@@ -10,7 +11,7 @@ const PortfolioGraph = () => {
     
         <div className="PortfolioGraph">
 
-            <Plot
+            <Plot className="Plot"
             data={[
                 {
                 x: ['2012-09-01','2013-09-01','2014-09-01','2015-09-01', '2016-09-01', '2017-09-02', '2018-04-03','2019-09-03','2020-09-04','2021-09-03'],
@@ -24,8 +25,8 @@ const PortfolioGraph = () => {
             layout={{ 
                 title:{text:"Portfolio Value: $1000.00"},
                 titlefont:{size:20,font_family:"Montserrat",color:'black'},
-                width: 650,
-                height: 400,  
+                width: 600,
+                height: 350,  
                 paper_bgcolor:'white',
                 plot_bgcolor:"white",    
                 font_color:"white",

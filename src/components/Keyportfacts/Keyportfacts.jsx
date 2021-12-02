@@ -1,4 +1,5 @@
 import './Keyportfacts.css'
+import Button from 'react-bootstrap/Button'
 
 const Keyportfacts = () => {
 
@@ -6,7 +7,8 @@ return (
 
     <div className="KeyContainer">
         <div className="KeyRow">
-            Key Portfolio Facts
+            <div className="Title"> 
+            </div>
         </div>
         <div className="KeyRow">
             Investment Horizon: 
@@ -16,7 +18,8 @@ return (
         Risk Level: Moderate
         </div>
         <div className="KeyRow">
-            Edit Portfolio Details 
+            <Button variant="primary">  View Portfolio Holdings </Button>
+            <Button variant="secondary"> Edit Portfolio Details </Button>
         </div>
     
     </div>
