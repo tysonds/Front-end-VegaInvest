@@ -1,11 +1,11 @@
 import react, { useState } from 'react'
-import MCrisk from '../MCrisk/MCrisk.js';
-import './userqone.css';
+import EditMC from '../EditMC/EditMC.js';
+import './edituserqone.css';
 import Button from 'react-bootstrap/Button'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Link } from 'react-router-dom'
 
-const Userqone = () => {
+const Edituserqone = () => {
 
   const [values, setValues] = useState(
     {
@@ -31,7 +31,7 @@ return (
  <div className="question"> 
  1. What is your risk tolerance for this portfolio?
  </div> 
-   <MCrisk />
+   <EditMC />
    <div className="question">
   2. What is your investment goal?
   </div>
@@ -49,7 +49,7 @@ return (
             onChange={handleHorizonChange}
             value={values.horizon}
             className="formfield"
-            placeholder="Enter the horizon in years"
+            placeholder={values.horizon}
             name="horizon"
   />
   <div className="question">
@@ -59,15 +59,15 @@ return (
             onChange={handleNameChange}
             value={values.name}
             className="formfield"
-            placeholder="Enter a portfolio name"
+            placeholder={values.name}
             name="name"
   />
-  <Link to="/" style={{ textDecoration: 'none' }}> 
-<Button variant="secondary" className="pBtn"> Create Portfolio </Button>
+  <Link to="/dashboard" style={{ textDecoration: 'none' }}> 
+<Button variant="secondary" className="pBtn"> Update Portfolio </Button>
 </Link>
 </div>
  </form>
   );
 
 }
-export default Userqone
+export default Edituserqone
