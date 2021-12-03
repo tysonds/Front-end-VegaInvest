@@ -9,9 +9,9 @@ const Userqone = () => {
 
   const [values, setValues] = useState(
     {
+    amount_invest: "",
     goal: "",
-    horizon: "",
-    name: "",   
+    horizon: "",   
     }
 );
 
@@ -21,7 +21,7 @@ const handleGoalChange = (event) => {
 const handleHorizonChange = (event) => {
     setValues({...values, horizon: event.target.value})
 }
-const handleNameChange = (event) => {
+const handleAmountInvestChange = (event) => {
     setValues({...values, name: event.target.value})
 }
 
@@ -32,18 +32,29 @@ return (
  1. What is your risk tolerance for this portfolio?
  </div> 
    <MCrisk />
+
+<div className="question">
+   2. How much do you have to invest? 
+    </div>
+  <input
+            onChange={handleAmountInvestChange}
+            value={values.amount_invest}
+            className="formfield"
+            placeholder="Enter the Amount in $"
+            name="amount_invest"
+  />
    <div className="question">
-  2. What is your investment goal?
+  3. What is your investment goal?
   </div>
  <input
             onChange={handleGoalChange}
             value={values.goal}
             className="formfield"
-            placeholder={values.goal}
+            placeholder="Enter the Goal in $"
             name="goal"
   />
   <div className="question">
-    3. What is your investment horizon?
+    4. What is your investment horizon?
     </div>
     <input
             onChange={handleHorizonChange}
@@ -51,16 +62,6 @@ return (
             className="formfield"
             placeholder="Enter the horizon in years"
             name="horizon"
-  />
-  <div className="question">
-   4. What would you like to name this portfolio? 
-    </div>
-  <input
-            onChange={handleNameChange}
-            value={values.name}
-            className="formfield"
-            placeholder="Enter a portfolio name"
-            name="name"
   />
   <Link to="/" style={{ textDecoration: 'none' }}> 
 <Button variant="secondary" className="pBtn"> Create Portfolio </Button>

@@ -9,9 +9,9 @@ const Edituserqone = () => {
 
   const [values, setValues] = useState(
     {
+    amount_invest: "",
     goal: "",
-    horizon: "",
-    name: "",   
+    horizon: "",   
     }
 );
 
@@ -21,7 +21,7 @@ const handleGoalChange = (event) => {
 const handleHorizonChange = (event) => {
     setValues({...values, horizon: event.target.value})
 }
-const handleNameChange = (event) => {
+const handleAmountInvestChange = (event) => {
     setValues({...values, name: event.target.value})
 }
 
@@ -32,8 +32,19 @@ return (
  1. What is your risk tolerance for this portfolio?
  </div> 
    <EditMC />
+
+<div className="question">
+   2. How much do you have to invest? 
+    </div>
+  <input
+            onChange={handleAmountInvestChange}
+            value={values.amount_invest}
+            className="formfield"
+            placeholder={values.amount_invest}
+            name="amount_invest"
+  />
    <div className="question">
-  2. What is your investment goal?
+  3. What is your investment goal?
   </div>
  <input
             onChange={handleGoalChange}
@@ -43,7 +54,7 @@ return (
             name="goal"
   />
   <div className="question">
-    3. What is your investment horizon?
+    4. What is your investment horizon?
     </div>
     <input
             onChange={handleHorizonChange}
@@ -52,18 +63,8 @@ return (
             placeholder={values.horizon}
             name="horizon"
   />
-  <div className="question">
-   4. What would you like to name this portfolio? 
-    </div>
-  <input
-            onChange={handleNameChange}
-            value={values.name}
-            className="formfield"
-            placeholder={values.name}
-            name="name"
-  />
-  <Link to="/dashboard" style={{ textDecoration: 'none' }}> 
-<Button variant="secondary" className="pBtn"> Update Portfolio </Button>
+  <Link to="/" style={{ textDecoration: 'none' }}> 
+<Button variant="secondary" className="pBtn"> Create Portfolio </Button>
 </Link>
 </div>
  </form>
