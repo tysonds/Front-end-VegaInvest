@@ -63,8 +63,8 @@ return (
             placeholder={values.horizon}
             name="horizon"
   />
-  <Link to="/" style={{ textDecoration: 'none' }}> 
-<Button variant="secondary" className="pBtn"> Create Portfolio </Button>
+  <Link to="/dashboard" style={{ textDecoration: 'none' }}> 
+<Button variant="secondary" className="pBtn"> Update Portfolio </Button>
 </Link>
 </div>
  </form>
