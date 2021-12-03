@@ -32,6 +32,14 @@ const Dashboard = () => {
     </tr>
   </thead>
   <tbody>
+    <tr> 
+      <td> Total Contributions</td>
+      <td> $800.00</td> 
+      </tr>
+      <tr> 
+      <td> Total Return </td>
+      <td> $200.00 (20.1%) </td> 
+      </tr>
     <tr>
       <td> Annualized Return </td>
       <td> 18.3 % </td>

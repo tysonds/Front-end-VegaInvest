@@ -15,10 +15,10 @@ return (
             </div>
         </div>
         <div className="KeyRow">
-            <strong style={{width: "12rem"}}> Investment Horizon: </strong> <div> <ProgressBar style={{width: '18rem', marginTop: '5px'}} now={50} /> </div>  <div style={{width: "5rem"}}> 50 years </div>
+            <strong style={{width: "12rem", marginLeft:'1rem'}}> Investment Horizon: </strong> <div> <ProgressBar style={{width: '15rem', marginTop: '5px'}} now={50} /> </div>  <div style={{width: "5rem", marginLeft:"1rem"}}> 50 years </div>
         </div>
         <div className="KeyRow">
-            <strong style={{width: "12rem"}}> Investment Goal: </strong> <div> <ProgressBar style={{width: '18rem', marginTop: '5px'}} now={50} /> </div>  <div style={{width: "5rem"}}> $250,000 </div>
+            <strong style={{width: "12rem", marginLeft: '1rem'}}> Investment Goal: </strong> <div> <ProgressBar style={{width: '15rem', marginTop: '5px'}} now={50} /> </div>  <div style={{width: "5rem", marginLeft: "1rem"}}> $250,000 </div>
         </div>
 
         <div className="KeyRow"> 
