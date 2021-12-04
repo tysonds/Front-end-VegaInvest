@@ -8,12 +8,12 @@ const Login = () => {
 
 const [values, setValues] = useState(
     {
-    userName: "",
+    email: "",
     password: "",    
     }
 );
 
-const handleUsernameInputChange = (event) => {
+const handleEmailChange = (event) => {
     setValues({...values, userName: event.target.value})
 }
 const handlePasswordInputChange = (event) => {
@@ -28,11 +28,12 @@ return (
         <div className="form"> 
         <form className="Login-form">
             <input 
-            onChange={handleUsernameInputChange}
-            value={values.userName}
+            onChange={handleEmailChange}
+            type="email"
+            value={values.email}
             className="form-field"
-            placeholder="Enter Your Username"
-            name="userName"
+            placeholder="Enter Your Email"
+            name="email"
             /> 
             <br />
             <input 

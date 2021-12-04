@@ -6,13 +6,13 @@ import './ETF_table.css'
 const ETF_table = () => { 
     
 const ETF = [
-    {ticker: "BBC", description:"Tracks the LifeSci Biotechnology Clinical Trials Index, which tracks the performance of select clinical trials stage biotechnology companies.",shares:"2", value:"$5430.98", weight: "18.29%"},
-    {ticker: "GAMR", description:"Tracks an equity index of global firms that support, create or use video games. Stocks are assigned to pure-play, non-pure-play or conglomerate baskets, and weighted equally within each.", shares:"3",value:"$1000.98", weight: "2.29%"},
-    {ticker: "QLNC", description:"Tracks the First Trust NASDAQ Clean Edge Green Energy (alternative energy) Index.", shares:"4",value:"$1300.98", weight: "2.00%"},
-    {ticker: "SPY", description:"Tracks the S&P500 stock market index of large and mid-cap US stocks.", shares:"14",value:"$1100.98", weight: "2.1%"},
-    {ticker: "ERTH", description:"Fund that invests in small-, mid- and large-cap companies. Companies are eligible for inclusion in the index if they derive 75% or more of their cumulative revenue from six areas: alternative energy, energy efficiency, green building, sustainable water, pollution prevention and control, and sustainable agriculture.", shares:"14",value:"$1100.98", weight: "2.1%"},
-    {ticker: "IMCG", description:"seeks to track the investment results of an index composed of mid-capitalization U.S. equities that exhibit growth characteristics.", shares:"14",value:"$1100.98", weight: "2.1%"},
-    {ticker: "ITOT", description:"Tracks the S&P500 stock market index of large and mid-cap US stocks", shares:"14",value:"$1100.98", weight: "2.1%"},
+    {ticker: "BBC", description:"Tracks the LifeSci Biotechnology Clinical Trials Index, which tracks the performance of select clinical trials stage biotechnology companies.",shares:"72", value:"$3679.20", weight: "18.2%"},
+    {ticker: "GAMR", description:"Tracks an equity index of global firms that support, create or use video games. Stocks are assigned to pure-play, non-pure-play or conglomerate baskets, and weighted equally within each.", shares:"32",value:"$3649.60", weight: "18.0%"},
+    {ticker: "QLNC", description:"Tracks the First Trust NASDAQ Clean Edge Green Energy (alternative energy) Index.", shares:"28",value:"$2824.08", weight: "13.9%"},
+    {ticker: "SPY", description:"Tracks the S&P500 stock market index of large and mid-cap US stocks.", shares:"3",value:"$585.47", weight: "8.7%"},
+    {ticker: "ERTH", description:"Fund that seeks to track the investment results of MSCI Global Environment Select Index. The Fund generally will invest at least 90% of its total assets in the securities that comprise the Underlying Index. The Underlying Index is designed to maximize exposure to six themes that impact the environment.", shares:"11",value:"964.15", weight: "4.8%"},
+    {ticker: "IMCG", description:"Fund that seeks to track the investment results of an index composed of mid-capitalization U.S. equities that exhibit growth characteristics.", shares:"8",value:"$716.19", weight: "3.5%"},
+    {ticker: "ITOT", description:"Tracks the S&P500 stock market index of large and mid-cap US stocks", shares:"3",value:"$1756.41", weight: "8.7%"},
     {ticker: "SPY", description:"Tracks the S&P500 stock market index of large and mid-cap US stocks", shares:"14",value:"$1100.98", weight: "2.1%"},
     {ticker: "SPY", description:"Tracks the S&P500 stock market index of large and mid-cap US stocks", shares:"14",value:"$1100.98", weight: "2.1%"},
     {ticker: "SPY", description:"Tracks the S&P500 stock market index of large and mid-cap US stocks", shares:"14",value:"$1100.98", weight: "2.1%"},

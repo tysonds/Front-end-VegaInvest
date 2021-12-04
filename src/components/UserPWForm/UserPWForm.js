@@ -8,14 +8,14 @@ const UserPwForm = () => {
 
 const [values, setValues] = useState(
     {
-    userName: "",
+    email: "",
     password: "",
     confirmpassword: "",
     passwordMatch: false,    
     }
 );
 
-const handleUsernameInputChange = (event) => {
+const handleEmailChange = (event) => {
     setValues({...values, userName: event.target.value})
 }
 
@@ -30,16 +30,17 @@ return (
 
     <div className="UserPWForm-container">
         <div className="UserPWFormHeader">
-        Create a Username and Password
+        Register Email and Password
         </div>
         <div className="form">
         <form className="UserPW-form">
             <input
-            onChange={handleUsernameInputChange}
-            value={values.userName}
+            onChange={handleEmailChange}
+            type="email"
+            value={values.email}
             className="form-field"
-            placeholder="Enter 5-10 character Username"
-            name="userName"
+            placeholder="Enter your Email"
+            name="email"
             />
             <br />
             <input

@@ -34,23 +34,23 @@ const Dashboard = () => {
   <tbody>
     <tr> 
       <td> Total Contributions</td>
-      <td> $800.00</td> 
+      <td> $10,000.00</td> 
       </tr>
       <tr> 
       <td> Total Return </td>
-      <td> $200.00 (20.1%) </td> 
+      <td> $10,249.00 (102.5%) </td> 
       </tr>
     <tr>
       <td> Annualized Return </td>
-      <td> 18.3 % </td>
+      <td> 15.2 % </td>
     </tr>
     <tr>
       <td> Annualized Volatility </td>
-      <td> 7.3% </td>
+      <td> 17.3% </td>
     </tr>
     <tr>
       <td> Annualized Sharpe Ratio </td>
-      <td>23.09% </td>
+      <td>0.59 </td>
     </tr>
   </tbody>
 </Table>
