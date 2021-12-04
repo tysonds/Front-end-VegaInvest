@@ -14,7 +14,7 @@ const [values, setValues] = useState(
 );
 
 const handleEmailChange = (event) => {
-    setValues({...values, userName: event.target.value})
+    setValues({...values, email: event.target.value})
 }
 const handlePasswordInputChange = (event) => {
     setValues({...values, password: event.target.value})
