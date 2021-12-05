@@ -27,7 +27,8 @@ useEffect(() => {
         console.log(error)
       })
   }, [])
-
+const HorzProgress=(100/getMessage.horizon)*100;
+const GoalProgress=(300/getMessage.goal)*100;
 
 return (
 
@@ -38,10 +39,10 @@ return (
             </div>
         </div>
         <div className="KeyRow">
-            <strong style={{width: "12rem", marginLeft:'1rem'}}> Investment Horizon: </strong> <div> <ProgressBar style={{width: '15rem', marginTop: '5px'}} now={50} /> </div>  <div style={{width: "5rem", marginLeft:"1rem"}}> {/*console.log(Horizon_out)*/} years </div>
+            <strong style={{width: "12rem", marginLeft:'1rem'}}> Investment Horizon: </strong> <div> <ProgressBar style={{width: '15rem', marginTop: '5px'}} now={HorzProgress} /> </div>  <div style={{width: "5rem", marginLeft:"1rem"}}> {getMessage.horizon} years </div>
         </div>
         <div className="KeyRow">
-            <strong style={{width: "12rem", marginLeft: '1rem'}}> Investment Goal: </strong> <div> <ProgressBar style={{width: '15rem', marginTop: '5px'}} now={52} /> </div>  <div style={{width: "5rem", marginLeft: "1rem"}}> ${/*console.log(Goal_out)*/} </div>
+            <strong style={{width: "12rem", marginLeft: '1rem'}}> Investment Goal: </strong> <div> <ProgressBar style={{width: '15rem', marginTop: '5px'}} now={GoalProgress} /> </div>  <div style={{width: "5rem", marginLeft: "1rem"}}> ${getMessage.goal} </div>
         </div>
 
         <div className="KeyRow"> 

@@ -33,7 +33,7 @@ const Dashboard = () => {
   </thead>
   <tbody>
     <tr> 
-      <td> Total Contributions</td>
+      <td> Amount Invested</td>
       <td> $10,000.00</td> 
       </tr>
       <tr> 
