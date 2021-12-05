@@ -60,5 +60,5 @@ div.form {
 .errMessage {
   display: inline-block;
   color: #000000;
-  height: 5%;
+  font-weight: bold;
 }
