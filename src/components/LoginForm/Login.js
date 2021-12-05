@@ -16,6 +16,8 @@ const [values, setValues] = useState(
     }
 );
 
+const [error, setError] = useState("");
+
 const [getPostMessage, setGetPostMessage] = useState({});
 
 const handleEmailChange = (event) => {
@@ -33,7 +35,8 @@ useEffect(() => {
         navigate("../dashboard", {});
       }
     else {
-        return (<div> Alert </div> )
+        setError(getPostMessage.Status);
+
     }
         
 }, [getPostMessage])
@@ -77,7 +80,7 @@ return (
             name="password"
             />
             <br />
-        <a href="">Forgot Password? </a>
+        <div id="errorMessage"> {error} </div>
         <br />
         {/* <Link to="/dashboard" style={{ textDecoration: 'none', color: 'black' }}> */}
         <Button onClick={HandleLogin} variant="secondary" className="LoginBtn" id="BtnLogin"> Log In </Button>

@@ -71,3 +71,8 @@ div.form {
   background-color: #eeeeee;
   color: #000000;
 }
+#errorMessage {
+  display: inline-block;
+  color: #000000;
+  height: 7.5%;
+}
