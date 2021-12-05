@@ -25,14 +25,26 @@ const handleAmountInvestChange = (event) => {
     setpvalues({...pvalues, name: event.target.value})
 }
 
+const onChangeMC = (event) => {
+      console.log(event.target.value);
+
+}
+
 return (
   <form>
  <div className="mccontainer"> 
  <div className="question"> 
  1. What is your risk tolerance for this portfolio?
  </div> 
-   <MCrisk />
-   {console.log(MCrisk)}
+<div className="rad" onChange={onChangeMC}>
+        <input type="radio" value="high" name="risk" /> High, bring it on!
+        <br />
+        <input type="radio" value="medium" name="risk" /> Moderate, some risk for some reward.
+        <br />
+        <input type="radio" value="low" name="risk" /> Low, losing money makes me squirm.
+        <br /> 
+      </div>
+
 
 <div className="question">
    2. How much do you have to invest? 
