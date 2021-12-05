@@ -1,19 +1,26 @@
 import react, { useState ,useEffect} from 'react'
-import MCrisk from '../MCrisk/MCrisk.js';
 import './userqone.css';
 import Button from 'react-bootstrap/Button'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { Link, Navigate, useLocation } from 'react-router-dom'
+import { Link, useNavigate, useLocation } from 'react-router-dom'
+import axios from 'axios'
 
 const Userqone = (values) => {
   const value=  useLocation().state.values.email
   const [pvalues, setpvalues] = useState(
     {
+    email: value,
     amount_invest: "",
     goal: "",
-    horizon: "",   
+    horizon: "",
+    risk_appetite: "",   
     }
 );
+
+
+const [getPostMessage, setGetPostMessage] = useState({})
+
+const [Errormsg,setErrormsg] = useState("")
 
 const handleGoalChange = (event) => {
     setpvalues({...pvalues, goal: event.target.value})
@@ -22,14 +29,42 @@ const handleHorizonChange = (event) => {
     setpvalues({...pvalues, horizon: event.target.value})
 }
 const handleAmountInvestChange = (event) => {
-    setpvalues({...pvalues, name: event.target.value})
+    setpvalues({...pvalues, amount_invest: event.target.value})
 }
 
 const onChangeMC = (event) => {
-      console.log(event.target.value);
+  setpvalues({...pvalues, risk_appetite: event.target.value});
 
 }
 
+let navigate = useNavigate();
+
+useEffect(() => {
+    if (getPostMessage.Status=='portfolio created!') {
+        console.log("inside");
+        navigate("../dashboard", 
+        {
+            state: {
+              values
+            }
+          });
+      }
+    else {
+        setErrormsg(getPostMessage.Status);
+
+    }
+        
+}, [getPostMessage])
+
+const HandlePortfolio = () => {
+  var fullurl='http://127.0.0.1:5000/portfolios/new';
+  axios.post(fullurl, pvalues).then(response => {
+      setGetPostMessage(response.data)
+      console.log(response.data)
+    }).catch(error => {
+      console.log(error)
+    })
+  }
 return (
   <form>
  <div className="mccontainer"> 
@@ -77,10 +112,13 @@ return (
             name="horizon"
   />
   <Link to="/" style={{ textDecoration: 'none' }}> 
-<Button variant="secondary" className="pBtn"> Create Portfolio </Button>
+<Button onClick= {HandlePortfolio} variant="secondary" className="pBtn"> Create Portfolio </Button>
+<p>
+</p>
 </Link>
 </div>
  </form>
+
   );
 
 }
