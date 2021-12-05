@@ -2,9 +2,31 @@ import './Keyportfacts.css';
 import Button from 'react-bootstrap/Button';
 import ProgressBar from 'react-bootstrap/ProgressBar';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Link } from 'react-router-dom'
+import { Link, useNavigate, useLocation } from 'react-router-dom'
+import react, { useState,useEffect } from 'react'
+import axios from 'axios';
 
 const Keyportfacts = () => {
+const email=  useLocation().state.values.email
+const [getMessage, setGetMessage] = useState({})
+
+useEffect(() => {
+    if (getMessage.Status=='Success') {
+        console.log("inside");
+      }
+        
+}, [setGetMessage])
+
+const  PortRiskGetQuery = (query_email) => {
+    var fullurl='http://127.0.0.1:5000/portfolios/pushRisk/' + query_email;
+    axios.get(fullurl).then(response => {
+        console.log("SUCCESS", response)
+        setGetMessage(response)
+      }).catch(error => {
+        console.log(error)
+      })
+    } 
+
 
 return (
 
@@ -15,14 +37,14 @@ return (
             </div>
         </div>
         <div className="KeyRow">
-            <strong style={{width: "12rem", marginLeft:'1rem'}}> Investment Horizon: </strong> <div> <ProgressBar style={{width: '15rem', marginTop: '5px'}} now={50} /> </div>  <div style={{width: "5rem", marginLeft:"1rem"}}> 10 years </div>
+            <strong style={{width: "12rem", marginLeft:'1rem'}}> Investment Horizon: </strong> <div> <ProgressBar style={{width: '15rem', marginTop: '5px'}} now={50} /> </div>  <div style={{width: "5rem", marginLeft:"1rem"}}> {/*console.log(Horizon_out)*/} years </div>
         </div>
         <div className="KeyRow">
-            <strong style={{width: "12rem", marginLeft: '1rem'}}> Investment Goal: </strong> <div> <ProgressBar style={{width: '15rem', marginTop: '5px'}} now={52} /> </div>  <div style={{width: "5rem", marginLeft: "1rem"}}> $40,000 </div>
+            <strong style={{width: "12rem", marginLeft: '1rem'}}> Investment Goal: </strong> <div> <ProgressBar style={{width: '15rem', marginTop: '5px'}} now={52} /> </div>  <div style={{width: "5rem", marginLeft: "1rem"}}> ${/*console.log(Goal_out)*/} </div>
         </div>
 
         <div className="KeyRow"> 
-        <strong> Risk Level:  Moderate </strong>
+        <strong> Risk Level: </strong>
         </div>
         <div className="KeyRow">
             <Link to="/portfoliosum" style={{ textDecoration: 'none'}}> 
