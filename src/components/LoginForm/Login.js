@@ -32,7 +32,7 @@ let navigate = useNavigate();
 useEffect(() => {
     if (getPostMessage.Status=='found') {
         console.log("inside");
-        navigate("../dashboard", {});
+        navigate("../dashboard", values);
       }
     else {
         setError(getPostMessage.Status);

@@ -1,4 +1,4 @@
-import react, { useState } from 'react'
+import react, { useState ,useEffect} from 'react'
 import MCrisk from '../MCrisk/MCrisk.js';
 import './userqone.css';
 import Button from 'react-bootstrap/Button'
@@ -40,7 +40,7 @@ return (
             onChange={handleAmountInvestChange}
             value={values.amount_invest}
             className="formfield"
-            placeholder="Enter the Amount in $"
+            placeholder=  "Enter the Amount in $"
             name="amount_invest"
   />
    <div className="question">
