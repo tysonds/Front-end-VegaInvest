@@ -2,7 +2,7 @@ import react, { useState,useEffect } from 'react'
 import './Login.css'
 import Button from 'react-bootstrap/Button'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useNavigate, useLocation } from 'react-router-dom'
 import axios from 'axios';
 
 
@@ -31,8 +31,12 @@ let navigate = useNavigate();
 
 useEffect(() => {
     if (getPostMessage.Status=='found') {
-        console.log("inside");
-        navigate("../dashboard", values);
+        navigate("../dashboard", 
+        {
+            state: {
+              values
+            }
+          });
       }
     else {
         setError(getPostMessage.Status);
@@ -80,7 +84,7 @@ return (
             name="password"
             />
             <br />
-        <div className="errorMessage"> {error} </div>
+        <div id="errorMessage"> {error} </div>
         <br />
         {/* <Link to="/dashboard" style={{ textDecoration: 'none', color: 'black' }}> */}
         <Button onClick={HandleLogin} variant="secondary" className="LoginBtn" id="BtnLogin"> Log In </Button>

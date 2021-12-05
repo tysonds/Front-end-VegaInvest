@@ -7,13 +7,15 @@ import Footer from '../../components/Footer/Footer';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Link} from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom'
 import Table from 'react-bootstrap/Table'
 import Keyportfacts from '../../components/Keyportfacts/Keyportfacts.jsx';
 
 const Dashboard = () => {
-
+  const blah = useLocation()
+  console.log(blah)
   return(
+
  <div className="Dashbd">  
    <div> 
      <Dashhead> </Dashhead>
