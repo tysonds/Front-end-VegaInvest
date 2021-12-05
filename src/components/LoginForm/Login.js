@@ -80,7 +80,7 @@ return (
             name="password"
             />
             <br />
-        <div id="errorMessage"> {error} </div>
+        <div className="errorMessage"> {error} </div>
         <br />
         {/* <Link to="/dashboard" style={{ textDecoration: 'none', color: 'black' }}> */}
         <Button onClick={HandleLogin} variant="secondary" className="LoginBtn" id="BtnLogin"> Log In </Button>

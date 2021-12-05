@@ -11,10 +11,11 @@ const [values, setValues] = useState(
     {
     email: "",
     password: "",
-    confirmpassword: "",
-    passwordMatch: false,    
+    confirmpassword: "",   
     }
 );
+
+const [Errormsg,setErrormsg] = useState("")
 
 const handleEmailChange = (event) => {
     setValues({...values, email: event.target.value})
@@ -35,15 +36,17 @@ let navigate = useNavigate();
 useEffect(() => {
     if (getPostMessage.Status=='registered') {
         console.log("inside");
-        navigate("../dashboard", {});
+        navigate("../question", {});
       }
     else {
+        setErrormsg(getPostMessage.Status);
 
     }
         
 }, [getPostMessage])
 
 const HandleRegister = () => {
+    if (values.password==values.confirmpassword){
     var fullurl='http://127.0.0.1:5000/users/register';
     axios.post(fullurl, values).then(response => {
         setGetPostMessage(response.data)
@@ -51,6 +54,11 @@ const HandleRegister = () => {
       }).catch(error => {
         console.log(error)
       })
+}
+    else {
+        console.log("passwords don't match");
+        setErrormsg("Passwords don't match!");
+    }
 }
 return (
 
@@ -87,9 +95,9 @@ return (
             type="password"
             />
             <br />
-            <Link to="/question" style={{ textDecoration: 'none'}}> 
+            <div className="errMessage"> {Errormsg} </div>
+            <br />
             <Button onClick={HandleRegister} variant="secondary" className="UserPWBtn"> Create New User </Button>
-            </Link>
             </form>    
         </div>
     

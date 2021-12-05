@@ -56,3 +56,9 @@ div.form {
   color: #eeeeee;
   background-color: #000000;
 }
+
+.errMessage {
+  display: inline-block;
+  color: #000000;
+  height: 5%;
+}
