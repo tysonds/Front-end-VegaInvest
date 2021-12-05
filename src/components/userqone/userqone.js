@@ -42,11 +42,8 @@ let navigate = useNavigate();
 useEffect(() => {
     if (getPostMessage.Status=='portfolio created!') {
         console.log("inside");
-        navigate("../dashboard", 
+        navigate("../", 
         {
-            state: {
-              values
-            }
           });
       }
     else {
