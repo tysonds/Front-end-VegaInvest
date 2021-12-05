@@ -10,7 +10,6 @@ div.question {
 .mccontainer {
   display: flex;
   margin-left: 20%;
-  margin-top: 5%;
   flex-direction: column;
   justify-content: center;
   background-color: #eeeeee;
@@ -50,4 +49,9 @@ input.formfield {
   margin-left: 20%;
   margin-right: auto;
   margin-bottom: auto;
+}
+
+.errMessage {
+  display: inline-block;
+  color: #000000;
 }

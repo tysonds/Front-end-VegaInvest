@@ -111,11 +111,9 @@ return (
             placeholder="Enter the horizon in years"
             name="horizon"
   />
-  <Link to="/" style={{ textDecoration: 'none' }}> 
+  <div className="errMSG"> {Errormsg} </div>
+ 
 <Button onClick= {HandlePortfolio} variant="secondary" className="pBtn"> Create Portfolio </Button>
-<p>
-</p>
-</Link>
 </div>
  </form>
 
