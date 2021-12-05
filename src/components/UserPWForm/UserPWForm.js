@@ -36,7 +36,12 @@ let navigate = useNavigate();
 useEffect(() => {
     if (getPostMessage.Status=='registered') {
         console.log("inside");
-        navigate("../question", {});
+        navigate("../question", 
+        {
+            state: {
+              values
+            }
+          });
       }
     else {
         setErrormsg(getPostMessage.Status);

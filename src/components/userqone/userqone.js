@@ -3,11 +3,11 @@ import MCrisk from '../MCrisk/MCrisk.js';
 import './userqone.css';
 import Button from 'react-bootstrap/Button'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { Link } from 'react-router-dom'
+import { Link, Navigate, useLocation } from 'react-router-dom'
 
-const Userqone = () => {
-
-  const [values, setValues] = useState(
+const Userqone = (values) => {
+  const value=  useLocation().state.values.email
+  const [pvalues, setpvalues] = useState(
     {
     amount_invest: "",
     goal: "",
@@ -16,13 +16,13 @@ const Userqone = () => {
 );
 
 const handleGoalChange = (event) => {
-    setValues({...values, goal: event.target.value})
+    setpvalues({...pvalues, goal: event.target.value})
 }
 const handleHorizonChange = (event) => {
-    setValues({...values, horizon: event.target.value})
+    setpvalues({...pvalues, horizon: event.target.value})
 }
 const handleAmountInvestChange = (event) => {
-    setValues({...values, name: event.target.value})
+    setpvalues({...pvalues, name: event.target.value})
 }
 
 return (
@@ -32,13 +32,14 @@ return (
  1. What is your risk tolerance for this portfolio?
  </div> 
    <MCrisk />
+   {console.log(MCrisk)}
 
 <div className="question">
    2. How much do you have to invest? 
     </div>
   <input
             onChange={handleAmountInvestChange}
-            value={values.amount_invest}
+            value={pvalues.amount_invest}
             className="formfield"
             placeholder=  "Enter the Amount in $"
             name="amount_invest"
@@ -48,9 +49,9 @@ return (
   </div>
  <input
             onChange={handleGoalChange}
-            value={values.goal}
+            value={pvalues.goal}
             className="formfield"
-            placeholder="Enter the Goal in $"
+            placeholder="Enter the Goal in $" 
             name="goal"
   />
   <div className="question">
@@ -58,7 +59,7 @@ return (
     </div>
     <input
             onChange={handleHorizonChange}
-            value={values.horizon}
+            value={pvalues.horizon}
             className="formfield"
             placeholder="Enter the horizon in years"
             name="horizon"

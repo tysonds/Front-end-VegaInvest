@@ -3,24 +3,8 @@ import './MCrisk.css';
 import values from './../UserPWForm/UserPWForm.js'
 import axios from 'axios'
 import { Link, useNavigate } from 'react-router-dom'
-function Updaterisk(input) {
-  var risk = {
-    'risk_appetite': input
-  } 
-  const [getPostMessage, setGetPostMessage] = useState({})
-  var fullurl='http://127.0.0.1:5000/portfolios/editrisk';
-  useEffect(()=>{
-  axios.post(fullurl, risk).then(response => {
-      setGetPostMessage(response.data)
-      console.log(response.data)
-    }).catch(error => {
-      console.log(error)
-    })
-  }, [])
-  return(getPostMessage);
 
 
-}
 class MCrisk extends Component {
   
   constructor() {
@@ -34,8 +18,6 @@ class MCrisk extends Component {
 
   onChangeValue(event) {
     console.log(event.target.value);
-    const blah = Updaterisk(event.target.value)
-    console.log(blah)
 
   }
 
