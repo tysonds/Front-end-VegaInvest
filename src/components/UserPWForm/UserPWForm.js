@@ -1,8 +1,9 @@
-import react, { useState } from 'react'
+import react, { useState ,useEffect} from 'react'
 import './UserPWForm.css'
 import Button from 'react-bootstrap/Button'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import axios from 'axios'
 
 const UserPwForm = () => {
 
@@ -25,6 +26,31 @@ const handlePasswordInputChange = (event) => {
 }
 const handleConfirmPasswordInputChange = (event) => {
     setValues({...values, confirmpassword: event.target.value})
+}
+
+const [getPostMessage, setGetPostMessage] = useState({});
+
+let navigate = useNavigate();
+
+useEffect(() => {
+    if (getPostMessage.Status=='registered') {
+        console.log("inside");
+        navigate("../dashboard", {});
+      }
+    else {
+
+    }
+        
+}, [getPostMessage])
+
+const HandleRegister = () => {
+    var fullurl='http://127.0.0.1:5000/users/register';
+    axios.post(fullurl, values).then(response => {
+        setGetPostMessage(response.data)
+        console.log(response.data)
+      }).catch(error => {
+        console.log(error)
+      })
 }
 return (
 
@@ -62,7 +88,7 @@ return (
             />
             <br />
             <Link to="/question" style={{ textDecoration: 'none'}}> 
-            <Button variant="secondary" className="UserPWBtn"> Create New User </Button>
+            <Button onClick={HandleRegister} variant="secondary" className="UserPWBtn"> Create New User </Button>
             </Link>
             </form>    
         </div>
