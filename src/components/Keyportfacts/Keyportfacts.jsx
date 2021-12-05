@@ -17,15 +17,16 @@ useEffect(() => {
         
 }, [setGetMessage])
 
-const  PortRiskGetQuery = (query_email) => {
-    var fullurl='http://127.0.0.1:5000/portfolios/pushRisk/' + query_email;
+useEffect(() => {
+    var fullurl='http://127.0.0.1:5000/portfolios/pushRisk/' + email;
     axios.get(fullurl).then(response => {
-        console.log("SUCCESS", response)
-        setGetMessage(response)
+        console.log("SUCCESS")
+        console.log(response.data.risk_appetite);
+        setGetMessage(response.data)
       }).catch(error => {
         console.log(error)
       })
-    } 
+  }, [])
 
 
 return (
@@ -44,7 +45,7 @@ return (
         </div>
 
         <div className="KeyRow"> 
-        <strong> Risk Level: </strong>
+        <strong> Risk Level: {getMessage.risk_appetite}</strong>
         </div>
         <div className="KeyRow">
             <Link to="/portfoliosum" style={{ textDecoration: 'none'}}> 

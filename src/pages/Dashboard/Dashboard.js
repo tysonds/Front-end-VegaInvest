@@ -12,8 +12,6 @@ import Table from 'react-bootstrap/Table'
 import Keyportfacts from '../../components/Keyportfacts/Keyportfacts.jsx';
 
 const Dashboard = () => {
-  const blah = useLocation()
-  console.log(blah)
   return(
 
  <div className="Dashbd">  
