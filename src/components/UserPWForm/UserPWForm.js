@@ -47,7 +47,7 @@ return (
             onChange={handlePasswordInputChange}
             value={values.password}
             className="form-field"
-            placeholder="Enter A 7+ character Password"
+            placeholder="Enter a Password"
             name="password"
             type="password"
             />

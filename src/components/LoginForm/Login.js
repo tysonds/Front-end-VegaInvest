@@ -29,9 +29,13 @@ let navigate = useNavigate();
 
 useEffect(() => {
     if (getPostMessage.Status=='found') {
-        console.log("inside")
+        console.log("inside");
         navigate("../dashboard", {});
       }
+    else {
+        return (<div> Alert </div> )
+    }
+        
 }, [getPostMessage])
 
 
@@ -45,17 +49,6 @@ useEffect(() => {
       })
 }
 
-{/*const HandleLogin = () => {
-    var fullurl='http://127.0.0.1:5000/users/login';
-    axios.post(fullurl, values).then(response => {
-        setGetPostMessage(response.data)
-      }).catch(error => {
-        console.log(error)
-      })
-      if (getPostMessage.Status=='found') {
-        console.log("SUCCESS")
-      }
-}*/}
 
 
 return (
