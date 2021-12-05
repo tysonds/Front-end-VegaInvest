@@ -18,10 +18,10 @@ useEffect(() => {
 }, [setGetMessage])
 
 useEffect(() => {
-    var fullurl='http://127.0.0.1:5000/portfolios/pushRisk/' + email;
+    var fullurl='http://127.0.0.1:5000/portfolios/pushParams/' + email;
     axios.get(fullurl).then(response => {
         console.log("SUCCESS")
-        console.log(response.data.risk_appetite);
+        console.log(response.data);
         setGetMessage(response.data)
       }).catch(error => {
         console.log(error)
