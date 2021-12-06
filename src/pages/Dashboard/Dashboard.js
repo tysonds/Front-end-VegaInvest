@@ -56,15 +56,15 @@ const Dashboard = () => {
       </tr>
     <tr>
       <td> Annualized Return </td>
-      <td> 15.2 % </td>
+      <td> {getMessage.returns} </td>
     </tr>
     <tr>
       <td> Annualized Volatility </td>
-      <td> 17.3% </td>
+      <td> {getMessage.vol} </td>
     </tr>
      <tr>
       <td> Annualized Sharpe Ratio </td>
-      <td> 0.81 </td>
+      <td> {getMessage.sharpe} </td>
     </tr>
   </tbody>
 </Table>
