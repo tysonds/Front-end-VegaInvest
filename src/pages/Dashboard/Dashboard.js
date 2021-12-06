@@ -26,6 +26,7 @@ const Dashboard = () => {
       })
   }, [])
   
+
   return(
 
  <div className="Dashbd">  
@@ -52,7 +53,7 @@ const Dashboard = () => {
       </tr>
       <tr> 
       <td> Total Return </td>
-      <td> $10,249.00 (102.5%) </td> 
+      <td>  {getMessage.lastportval} </td> 
       </tr>
     <tr>
       <td> Annualized Return </td>
