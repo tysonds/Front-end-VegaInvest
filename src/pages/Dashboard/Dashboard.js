@@ -62,6 +62,10 @@ const Dashboard = () => {
       <td> Annualized Volatility </td>
       <td> 17.3% </td>
     </tr>
+     <tr>
+      <td> Annualized Sharpe Ratio </td>
+      <td> 0.81 </td>
+    </tr>
   </tbody>
 </Table>
 </div>
