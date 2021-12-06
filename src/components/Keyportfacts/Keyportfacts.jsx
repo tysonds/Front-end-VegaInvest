@@ -28,7 +28,7 @@ useEffect(() => {
       })
   }, [])
 const HorzProgress=(getMessage.time_difference/getMessage.horizon)*100;
-const GoalProgress=(300/getMessage.goal)*100;
+const GoalProgress=(getMessage.lastportval/getMessage.goal)*100;
 let navigate = useNavigate();
 const NavPort = () => {
     navigate("../portfoliosum", 

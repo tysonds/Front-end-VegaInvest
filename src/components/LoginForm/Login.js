@@ -16,8 +16,6 @@ const [values, setValues] = useState(
     }
 );
 
-const email=values.email;
-
 
 const [error, setError] = useState("");
 
@@ -36,7 +34,9 @@ useEffect(() => {
     if (getPostMessage.Status=='found') {
         navigate("../dashboard", 
         {
-            state: {email}
+            state: {
+              values
+            }
           });
       }
     else {
