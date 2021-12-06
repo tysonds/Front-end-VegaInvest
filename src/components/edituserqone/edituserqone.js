@@ -1,5 +1,4 @@
 import react, { useState,useEffect } from 'react'
-import EditMC from '../EditMC/EditMC.js';
 import './edituserqone.css';
 import Button from 'react-bootstrap/Button'
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -12,7 +11,8 @@ const [pvalues, setpValues] = useState(
     {
     amount_invest: "",
     goal: "",
-    horizon: "",   
+    horizon: "", 
+    risk_appetite: "",  
     }
 );
 
@@ -26,14 +26,25 @@ const handleAmountInvestChange = (event) => {
     setpValues({...pvalues, name: event.target.value})
 }
 
+const onChangeMC = (event) => {
+  setpValues({...pvalues, risk_appetite: event.target.value});
+
+}
+
 return (
   <form>
  <div className="mccontainer"> 
  <div className="question"> 
  1. What is your risk tolerance for this portfolio?
  </div> 
-   <EditMC />
-
+   <div className="rad" onChange={onChangeMC}>
+        <input type="radio" value="high" name="risk" /> High, bring it on!
+        <br />
+        <input type="radio" value="medium" name="risk" /> Moderate, some risk for some reward.
+        <br />
+        <input type="radio" value="low" name="risk" /> Low, losing money makes me squirm.
+        <br /> 
+      </div>
 <div className="question">
    2. How much do you have to invest? 
     </div>

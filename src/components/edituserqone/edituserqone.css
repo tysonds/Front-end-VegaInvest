@@ -41,3 +41,19 @@ input.formfield {
   color: #eeeeee;
   background-color: #000000;
 }
+
+.rad {
+  font-family: Montserrat;
+  font-style: normal;
+  font-size: 18px;
+  color: #000000;
+  margin-left: 20%;
+  margin-right: auto;
+  margin-bottom: auto;
+}
+
+.errMessage {
+  display: inline-block;
+  color: #000000;
+  text-align: center;
+}

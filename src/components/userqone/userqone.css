@@ -54,4 +54,5 @@ input.formfield {
 .errMessage {
   display: inline-block;
   color: #000000;
+  text-align: center;
 }
