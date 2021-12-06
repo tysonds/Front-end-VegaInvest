@@ -36,6 +36,12 @@ const NavPort = () => {
             state: {email}
           });
 }
+const NavQuest = () => {
+    navigate("../editquestion", 
+        {
+            state: {email}
+          });
+}
 
 
 return (
@@ -58,9 +64,7 @@ return (
         </div>
         <div className="KeyRow">
             <Button id="KeyHoldBtn" onClick={NavPort} variant="primary"> View Portfolio Holdings </Button>
-            <Link to="/question" style={{ textDecoration: 'none'}}>
-            <Button id="KeyDetBtn" variant="secondary"> Edit Portfolio Details </Button> 
-            </Link>
+            <Button onClick={NavQuest} id="KeyDetBtn" variant="secondary"> Edit Portfolio Details </Button> 
         </div>
     
     </div>

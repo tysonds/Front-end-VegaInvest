@@ -17,6 +17,12 @@ const NavDash = () => {
             state: {email}
           });
 }
+const NavQuest = () => {
+    navigate("../editquestion", 
+        {
+            state: {email}
+          });
+}
 
 return (
 
@@ -28,7 +34,7 @@ return (
      <DropdownButton id="dropdown-basic-button" title={email} id="dropBtn" variant="secondary">
        
     <Dropdown.Item href="/"> Logout  </Dropdown.Item>
-    <Dropdown.Item  href="/editquestion">  Edit Portfolio Details </Dropdown.Item>
+    <Dropdown.Item  onClick={NavQuest}>  Edit Portfolio Details </Dropdown.Item>
     </DropdownButton>
     </div>
     </div>

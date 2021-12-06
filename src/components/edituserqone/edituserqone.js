@@ -1,13 +1,14 @@
-import react, { useState } from 'react'
+import react, { useState,useEffect } from 'react'
 import EditMC from '../EditMC/EditMC.js';
 import './edituserqone.css';
 import Button from 'react-bootstrap/Button'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate, useLocation } from 'react-router-dom'
+import axios from 'axios';
 
 const Edituserqone = () => {
-
-  const [values, setValues] = useState(
+const email=  useLocation().state.email;
+const [pvalues, setpValues] = useState(
     {
     amount_invest: "",
     goal: "",
@@ -16,13 +17,13 @@ const Edituserqone = () => {
 );
 
 const handleGoalChange = (event) => {
-    setValues({...values, goal: event.target.value})
+    setpValues({...pvalues, goal: event.target.value})
 }
 const handleHorizonChange = (event) => {
-    setValues({...values, horizon: event.target.value})
+    setpValues({...pvalues, horizon: event.target.value})
 }
 const handleAmountInvestChange = (event) => {
-    setValues({...values, name: event.target.value})
+    setpValues({...pvalues, name: event.target.value})
 }
 
 return (
@@ -38,9 +39,9 @@ return (
     </div>
   <input
             onChange={handleAmountInvestChange}
-            value={values.amount_invest}
+            value={pvalues.amount_invest}
             className="formfield"
-            placeholder={values.amount_invest}
+            placeholder={pvalues.amount_invest}
             name="amount_invest"
   />
    <div className="question">
@@ -48,9 +49,9 @@ return (
   </div>
  <input
             onChange={handleGoalChange}
-            value={values.goal}
+            value={pvalues.goal}
             className="formfield"
-            placeholder={values.goal}
+            placeholder={pvalues.goal}
             name="goal"
   />
   <div className="question">
@@ -58,9 +59,9 @@ return (
     </div>
     <input
             onChange={handleHorizonChange}
-            value={values.horizon}
+            value={pvalues.horizon}
             className="formfield"
-            placeholder={values.horizon}
+            placeholder={pvalues.horizon}
             name="horizon"
   />
   <Link to="/dashboard" style={{ textDecoration: 'none' }}> 
