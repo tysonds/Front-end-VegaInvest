@@ -48,7 +48,7 @@ const Dashboard = () => {
   <tbody>
     <tr> 
       <td> Amount Invested</td>
-      <td> $10,000.00</td> 
+      <td> {getMessage.amount_invested} </td> 
       </tr>
       <tr> 
       <td> Total Return </td>

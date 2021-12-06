@@ -9,10 +9,10 @@ const Edituserqone = () => {
 const email=  useLocation().state.email;
 const [pvalues, setpValues] = useState(
     {
-    amount_invest: "",
-    goal: "",
-    horizon: "", 
-    risk_appetite: "",  
+    amount_invest: "10,000",
+    goal: "15,000",
+    horizon: "5", 
+    risk_appetite: "low",  
     }
 );
 
@@ -42,7 +42,7 @@ return (
         <br />
         <input type="radio" value="medium" name="risk" /> Moderate, some risk for some reward.
         <br />
-        <input type="radio" value="low" name="risk" /> Low, losing money makes me squirm.
+        <input type="radio" value="low" name="risk" checked="checked" /> Low, losing money makes me squirm.
         <br /> 
       </div>
 <div className="question">

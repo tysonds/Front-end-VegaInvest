@@ -27,7 +27,7 @@ useEffect(() => {
         console.log(error)
       })
   }, [])
-const HorzProgress=(100/getMessage.horizon)*100;
+const HorzProgress=(3/getMessage.horizon)*100;
 const GoalProgress=(300/getMessage.goal)*100;
 let navigate = useNavigate();
 const NavPort = () => {
