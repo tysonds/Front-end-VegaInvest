@@ -6,7 +6,7 @@ import { Link, useNavigate, useLocation } from 'react-router-dom'
 import axios from 'axios'
 
 const Userqone = (values) => {
-  const value=  useLocation().state.values.email
+  const value=  useLocation().state.email
   const [pvalues, setpvalues] = useState(
     {
     email: value,

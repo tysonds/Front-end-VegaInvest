@@ -16,6 +16,9 @@ const [values, setValues] = useState(
     }
 );
 
+const email=values.email;
+
+
 const [error, setError] = useState("");
 
 const [getPostMessage, setGetPostMessage] = useState({});
@@ -33,9 +36,7 @@ useEffect(() => {
     if (getPostMessage.Status=='found') {
         navigate("../dashboard", 
         {
-            state: {
-              values
-            }
+            state: {email}
           });
       }
     else {

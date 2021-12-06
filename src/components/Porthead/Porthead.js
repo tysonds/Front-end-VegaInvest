@@ -1,21 +1,31 @@
-import react, { useState } from 'react'
+import react, { useState, useEffect } from 'react'
 import {DropdownButton, Dropdown, Button} from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './Porthead.css';
-import { Link } from 'react-router-dom'
+import { Link, useNavigate, useLocation } from 'react-router-dom'
 
 const Porthead = () => {
+const email = useLocation().state.email;
+useEffect(() => {
+    console.log(email)
+},[]);
+
+let navigate = useNavigate();
+const NavDash = () => {
+    navigate("../dashboard", 
+        {
+            state: {email}
+          });
+}
 
 return (
 
     <div className="Porthead">
-      <div> 
-        <Link to="/dashboard" style={{ textDecoration: 'none'}}> 
-      <Button variant="secondary" id="DashBtn"> Dashboard </Button>
-      </Link> 
+      <div>  
+      <Button onClick={NavDash} variant="secondary" id="DashBtn"> Dashboard </Button> 
      </div>
      <div> 
-     <DropdownButton id="dropdown-basic-button" title="jefftsai1999" id="dropBtn" variant="secondary">
+     <DropdownButton id="dropdown-basic-button" title={email} id="dropBtn" variant="secondary">
        
     <Dropdown.Item href="/"> Logout  </Dropdown.Item>
     <Dropdown.Item  href="/editquestion">  Edit Portfolio Details </Dropdown.Item>

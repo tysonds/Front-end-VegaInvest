@@ -7,7 +7,7 @@ import react, { useState,useEffect } from 'react'
 import axios from 'axios';
 
 const Keyportfacts = () => {
-const email=  useLocation().state.values.email
+const email=  useLocation().state.email;
 const [getMessage, setGetMessage] = useState({})
 
 useEffect(() => {
@@ -29,6 +29,14 @@ useEffect(() => {
   }, [])
 const HorzProgress=(100/getMessage.horizon)*100;
 const GoalProgress=(300/getMessage.goal)*100;
+let navigate = useNavigate();
+const NavPort = () => {
+    navigate("../portfoliosum", 
+        {
+            state: {email}
+          });
+}
+
 
 return (
 
@@ -49,9 +57,7 @@ return (
         <strong> Risk Level: {getMessage.risk_appetite}</strong>
         </div>
         <div className="KeyRow">
-            <Link to="/portfoliosum" style={{ textDecoration: 'none'}}> 
-            <Button id="KeyHoldBtn" variant="primary"> View Portfolio Holdings </Button>
-            </Link> 
+            <Button id="KeyHoldBtn" onClick={NavPort} variant="primary"> View Portfolio Holdings </Button>
             <Link to="/question" style={{ textDecoration: 'none'}}>
             <Button id="KeyDetBtn" variant="secondary"> Edit Portfolio Details </Button> 
             </Link>
