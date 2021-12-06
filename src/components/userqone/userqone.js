@@ -18,7 +18,7 @@ const Userqone = (values) => {
 );
 
 
-const [getPostMessage, setGetPostMessage] = useState({})
+{/* const [getPostMessage, setGetPostMessage] = useState({}) */}
 
 const [Errormsg,setErrormsg] = useState("")
 
@@ -39,7 +39,7 @@ const onChangeMC = (event) => {
 
 let navigate = useNavigate();
 
-useEffect(() => {
+{/*useEffect(() => {
     if (getPostMessage.Status=='portfolio created!') {
         console.log("inside");
         navigate("../", 
@@ -51,9 +51,42 @@ useEffect(() => {
 
     }
         
-}, [getPostMessage])
+}, [getPostMessage]) */}
 
 const HandlePortfolio = () => {
+  if (isNaN(parseInt(pvalues.horizon))) {
+    setErrormsg('Invalid Horizon!');
+  }
+  else if (isNaN(parseInt(pvalues.goal))) {
+    setErrormsg('Invalid Goal!');
+  }
+  else if (isNaN(parseInt(pvalues.amount_invest))) {
+    setErrormsg('Invalid Amount Invested!');
+  }
+  else if (parseInt(pvalues.amount_invest)<=0) {
+    setErrormsg('Invalid Amount Invested!');
+  }
+  else if (parseInt(pvalues.goal)<=0) {
+    setErrormsg('Invalid Goal!');
+  }
+  else if (parseInt(pvalues.horizon)<=0) {
+    setErrormsg('Invalid Horizon1');
+  }
+  else if (parseInt(pvalues.goal) <= parseInt(pvalues.amount_invest)){
+    setErrormsg('Goal Must Exceed Amount Invested!');
+  }
+  else if (pvalues.risk_appetite==="") {
+    setErrormsg('You must select a Risk Level!')
+  }
+  else {
+  console.log("you did it");
+  navigate("../loading", 
+        {
+          state: pvalues});
+}
+}
+
+{/* const HandlePortfolio = () => {
   var fullurl='http://127.0.0.1:5000/portfolios/new';
   axios.post(fullurl, pvalues).then(response => {
       setGetPostMessage(response.data)
@@ -61,7 +94,7 @@ const HandlePortfolio = () => {
     }).catch(error => {
       console.log(error)
     })
-  }
+  } */}
 return (
   <form>
  <div className="mccontainer"> 

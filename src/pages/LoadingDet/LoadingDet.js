@@ -1,21 +1,47 @@
 import './LoadingDet.css';
+import react, { useState ,useEffect} from 'react'
 import Dashhead from '../../components/Dashhead/Dashhead.js'
 // import Plot from "react-plotly.js";
 import Footer from '../../components/Footer/Footer';
 import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
+import { Link, useNavigate, useLocation } from 'react-router-dom'
+import axios from 'axios'
 
 
 const LoadingDet= () => {
+const pvalues=  useLocation().state
+const [getPostMessage, setGetPostMessage] = useState({})
+let navigate = useNavigate(); 
+useEffect(() => {
+    if (getPostMessage.Status=='portfolio created!') {
+        console.log("inside");
+        navigate("../", 
+        {
+          });
+      }
+    else {
+      console.log(getPostMessage);
+      console.log('error!');
+      }        
+}, [getPostMessage])
 
+useEffect(() => {
+  var fullurl='http://127.0.0.1:5000/portfolios/new';
+  axios.post(fullurl, pvalues).then(response => {
+      console.log(response.data)
+      setGetPostMessage(response.data)
+    }).catch(error => {
+      console.log('yo')
+    })
+  });
   return(
  <div className="LoadingDetbd">  
    <div> 
-     <Dashhead> </Dashhead>
    </div>
    <div className="mainLoadingMSG">
       <div>
-          Your Portfolio Details Will be Available Shortly. Please Check in a Few Minutes.
+          Creating Portfolio...
       </div>
    </div>
    <div className="mainLoadingMSG">
