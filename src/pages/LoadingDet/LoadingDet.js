@@ -34,7 +34,7 @@ useEffect(() => {
     }).catch(error => {
       console.log('yo')
     })
-  });
+  },[]);
   return(
  <div className="LoadingDetbd">  
    <div> 
