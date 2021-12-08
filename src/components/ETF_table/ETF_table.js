@@ -56,7 +56,7 @@ const ETF = [
         <tr key={index}>
             <td>{ETF.ticker}</td>
             <td>{ETF.description}</td>
-            <td>{getMessage.weights[ETF.weight]*100}</td>
+            <td>{Math.round(getMessage.weights[ETF.weight]*100*1000,3)/1000}</td>
         </tr>
         )
     }
