@@ -5,7 +5,7 @@ import {DropdownButton, Dropdown} from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Link, useNavigate, useLocation } from 'react-router-dom'
 const Dashhead = () => {
-const email = useLocation().state.email;
+const email = useLocation().state.values.email;
 let navigate = useNavigate();
 const NavQuest = () => {
     navigate("../editquestion", 

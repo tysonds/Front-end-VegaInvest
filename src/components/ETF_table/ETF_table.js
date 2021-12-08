@@ -6,11 +6,11 @@ import axios from 'axios';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 
 const ETF_table = () => { 
-    const email=  useLocation().state.values.email;
-    const [getMessage, setGetMessage] = useState({})
-    {/*const [getMessage, setGetMessage] = useState({
+    const email=  useLocation().state.email;
+    {/*const [getMessage, setGetMessage] = useState({})*/}
+    const [getMessage, setGetMessage] = useState({
         weights: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-    })*/}
+    })
     useEffect(() => {
       var fullurl='http://127.0.0.1:5000/portfolios/pushWeights/' + email;
       axios.get(fullurl).then(response => {
@@ -23,7 +23,7 @@ const ETF_table = () => {
     }, [])
     
 const ETF = [
-    {'ticker': "QCLN", description:"Tracks the First Trust NASDAQ Clean Edge Green Energy (alternative energy) Index.", weight: getMessage.weights[0]},
+    {'ticker': "QCLN", description:"Tracks the First Trust NASDAQ Clean Edge Green Energy (alternative energy) Index.", weight: 0},
     {'ticker' : 'SOXX', description : 'The iShares Semiconductor ETF tracks the investment results of an index composed of U.S.listed equities in the semiconductor sector.',weight: 1}, 
                 { 'ticker' : 'PTF' , description :'Comprised of stocks of various companies based in the technology sector of the market. Invests all of its assets in domestic securities, and holds some big names in the tech sector, i.e., Apple and IBM', weight: 2},
                 { 'ticker' : 'LIT' , description :'Invests in the full lithium cycle, from mining and refining the metal,through battery production. Seeks to provide investment results that correspond generally to the price and yield performance of the Solactive Global Lithium Index.', weight:3},
@@ -56,7 +56,7 @@ const ETF = [
         <tr key={index}>
             <td>{ETF.ticker}</td>
             <td>{ETF.description}</td>
-            <td>{getMessage.weights[ETF.weight]}</td>
+            <td>{getMessage.weights[ETF.weight]*100}</td>
         </tr>
         )
     }
