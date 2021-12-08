@@ -8,8 +8,9 @@ import Box from '@mui/material/Box';
 import { Link, useNavigate, useLocation } from 'react-router-dom'
 import axios from 'axios'
 
-
+/* This is the Loading Page */
 const LoadingDet= () => {
+
 const pvalues=  useLocation().state
 const [getPostMessage, setGetPostMessage] = useState({})
 let navigate = useNavigate(); 

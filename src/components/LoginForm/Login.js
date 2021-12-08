@@ -6,9 +6,9 @@ import { Link, useNavigate, useLocation } from 'react-router-dom'
 import axios from 'axios';
 
 
-
+/*Login form */
 const Login = () => {
-
+/* Defining a state*/
 const [values, setValues] = useState(
     {
     email: "",
@@ -16,7 +16,7 @@ const [values, setValues] = useState(
     }
 );
 
-
+/* Error message */
 const [error, setError] = useState("");
 
 const [getPostMessage, setGetPostMessage] = useState({});
@@ -40,13 +40,14 @@ useEffect(() => {
           });
       }
     else {
+        /*We want to store the error messsage */
         setError(getPostMessage.Status);
 
     }
         
 }, [getPostMessage])
 
-
+/*We check if the email and pw match the DB */
  const HandleLogin = () => {
     var fullurl='http://127.0.0.1:5000/users/login';
     axios.post(fullurl, values).then(response => {
@@ -87,10 +88,9 @@ return (
             <br />
         <div id="errorMessage"> {error} </div>
         <br />
-        {/* <Link to="/dashboard" style={{ textDecoration: 'none', color: 'black' }}> */}
+        {/* Login and Sign Up Buttons*/}
         <Button onClick={HandleLogin} variant="secondary" className="LoginBtn" id="BtnLogin"> Log In </Button>
         <br />
-        {/* </Link> */}
         <Link to="/createuser" style={{ textDecoration: 'none', color: 'black' }}> 
         <Button variant="dark" className="LoginBtn" id="SignUp"> 
         Sign Up 

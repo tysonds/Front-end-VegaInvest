@@ -6,6 +6,8 @@ import { Link, useNavigate, useLocation } from 'react-router-dom'
 import axios from 'axios';
 
 const Edituserqone = () => {
+
+/* Fetching values from the back end*/
 const email=  useLocation().state.email;
 const [pvalues, setpValues] = useState(
     {
@@ -15,7 +17,6 @@ const [pvalues, setpValues] = useState(
     risk_appetite: "",  
     }
 );
-
 const handleGoalChange = (event) => {
     setpValues({...pvalues, goal: event.target.value})
 }
@@ -33,22 +34,9 @@ const onChangeMC = (event) => {
 
 let navigate = useNavigate();
 
-{/*useEffect(() => {
-    if (getPostMessage.Status=='portfolio created!') {
-        console.log("inside");
-        navigate("../", 
-        {
-          });
-      }
-    else {
-        setErrormsg(getPostMessage.Status);
-
-    }
-        
-}, [getPostMessage]) */}
 
 const HandlePortfolio = () => {
-  {/*if (isNaN(parseInt(pvalues.horizon))) {
+  /*if (isNaN(parseInt(pvalues.horizon))) {
     setErrormsg('Invalid Horizon!');
   }
   else if (isNaN(parseInt(pvalues.goal))) {
@@ -80,12 +68,12 @@ const HandlePortfolio = () => {
         state: {email}
         });
 }
-}
 
 return (
   <form>
  <div className="mccontainer"> 
  <div className="question"> 
+ {/* Questions of the questionnaire */}
  1. What is your risk tolerance for this portfolio?
  </div> 
    <div className="rad" onChange={onChangeMC}>
@@ -126,6 +114,7 @@ return (
             placeholder={pvalues.horizon}
             name="horizon"
   /> 
+  {/* Creating the button and defining how it responds to a click */}
 <Button variant="secondary"  onClick= {HandlePortfolio}  className="pBtn"> Recalculate Portfolio </Button>
 </div>
  </form>

@@ -4,9 +4,11 @@ import './Dashhead.css'
 import {DropdownButton, Dropdown} from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Link, useNavigate, useLocation } from 'react-router-dom'
-const Dashhead = () => {
+const Dashhead = () => {  
+/* Need to retrieve the email from prior routes */
 const email = useLocation().state.email;
 let navigate = useNavigate();
+/* Need to define the path from this header to the edit portfolio details questionnaire*/
 const NavQuest = () => {
     navigate("../editquestion", 
         {

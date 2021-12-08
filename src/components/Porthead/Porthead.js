@@ -4,7 +4,9 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import './Porthead.css';
 import { Link, useNavigate, useLocation } from 'react-router-dom'
 
+/*This is the header of the Portfolio summary page */
 const Porthead = () => {
+/* we need to find the user's email */
 const email = useLocation().state.email;
 useEffect(() => {
     console.log(email)
@@ -28,6 +30,7 @@ return (
 
     <div className="Porthead">
       <div>  
+        {/* User can go the Dashboard page from this button */}
       <Button onClick={NavDash} variant="secondary" id="DashBtn"> Dashboard </Button> 
      </div>
      <div> 
