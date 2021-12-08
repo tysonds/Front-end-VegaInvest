@@ -7,7 +7,7 @@ import react, { useState,useEffect } from 'react'
 import axios from 'axios';
 
 const Keyportfacts = () => {
-const email=  useLocation().state.email;
+const email=  useLocation().state.values.email;
 const [getMessage, setGetMessage] = useState({})
 
 useEffect(() => {

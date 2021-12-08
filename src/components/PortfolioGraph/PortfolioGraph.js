@@ -7,7 +7,7 @@ import { Link, useNavigate, useLocation } from 'react-router-dom';
 const Plot = createPlotlyComponent(Plotly);
 
 const PortfolioGraph = () => {
-  const email=  useLocation().state.email;
+  const email=  useLocation().state.values.email;
   const [getMessage, setGetMessage] = useState({})
   useEffect(() => {
     var fullurl='http://127.0.0.1:5000/portfolios/pushParams/' + email;
