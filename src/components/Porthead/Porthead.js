@@ -8,6 +8,9 @@ import { Link, useNavigate, useLocation } from 'react-router-dom'
 const Porthead = () => {
 /* we need to find the user's email */
 const email = useLocation().state.email;
+const values = {
+  email: email,
+}
 useEffect(() => {
     console.log(email)
 },[]);
@@ -16,7 +19,7 @@ let navigate = useNavigate();
 const NavDash = () => {
     navigate("../dashboard", 
         {
-            state: {email}
+            state: {values}
           });
 }
 const NavQuest = () => {

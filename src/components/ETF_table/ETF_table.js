@@ -8,6 +8,7 @@ import { Link, useNavigate, useLocation } from 'react-router-dom';
 const ETF_table = () => { 
     /* Fetching the weights from the back-end and getting the user's email */
     const email=  useLocation().state.email;
+    {/*const [getMessage, setGetMessage] = useState({})*/}
     const [getMessage, setGetMessage] = useState({
         weights: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
     })
@@ -55,7 +56,7 @@ const ETF = [
         <tr key={index}>
             <td>{ETF.ticker}</td>
             <td>{ETF.description}</td>
-            <td>{getMessage.weights[ETF.weight]}</td>
+            <td>{getMessage.weights[ETF.weight]*100}</td>
         </tr>
         )
     }

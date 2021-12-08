@@ -8,7 +8,7 @@ import axios from 'axios';
 
 const Keyportfacts = () => {
 /* We need to revtrieve the email and other info from the backend*/
-const email=  useLocation().state.email;
+const email=  useLocation().state.values.email;
 const [getMessage, setGetMessage] = useState({})
 
 useEffect(() => {

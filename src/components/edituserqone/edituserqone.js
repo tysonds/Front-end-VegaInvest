@@ -9,6 +9,9 @@ const Edituserqone = () => {
 
 /* Fetching values from the back end*/
 const email=  useLocation().state.email;
+const values = {
+  email: email,
+}
 const [pvalues, setpValues] = useState(
     {
     amount_invest: "",
@@ -65,7 +68,7 @@ const HandlePortfolio = () => {
   */
   navigate("../dashboard", 
         {
-        state: {email}
+        state: {values}
         });
 }
 
