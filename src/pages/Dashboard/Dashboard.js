@@ -25,6 +25,8 @@ const Dashboard = () => {
         console.log(error)
       })
   }, [])
+
+const rtotal=getMessage.lastportval/getMessage.amount_invested;
   
 
   return(
@@ -53,7 +55,7 @@ const Dashboard = () => {
       </tr>
       <tr> 
       <td> Total Return </td>
-      <td>  {getMessage.lastportval} </td> 
+      <td>  {rtotal} </td> 
       </tr>
     <tr>
       <td> Annualized Return </td>
