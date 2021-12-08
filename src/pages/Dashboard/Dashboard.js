@@ -13,7 +13,7 @@ import Keyportfacts from '../../components/Keyportfacts/Keyportfacts.jsx';
 import axios from 'axios';
 
 const Dashboard = () => {
-{/* Quering data from MongoDB and loading the user email */}
+/* Quering data from MongoDB and loading the user email */
   const email=  useLocation().state.values.email;
   const [getMessage, setGetMessage] = useState({})
   useEffect(() => {
@@ -26,7 +26,7 @@ const Dashboard = () => {
         console.log(error)
       })
   }, [])
-{/* computing the return */}
+/* computing the return */
 const rtotal=getMessage.lastportval/getMessage.amount_invested;
   
 

@@ -67,6 +67,7 @@ return (
         Welcome to VegaInvest!
         </div>
         <div className="form"> 
+        {/* Define a form with the email and pw input*/}
         <form className="Login-form">
             <input 
             onChange={handleEmailChange}

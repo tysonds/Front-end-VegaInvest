@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
+/*This allows the user to create a PW and then store it in the DB */
 const UserPwForm = () => {
 
 const [values, setValues] = useState(
@@ -53,6 +54,7 @@ useEffect(() => {
 const HandleRegister = () => {
     if (values.password==values.confirmpassword){
     var fullurl='http://127.0.0.1:5000/users/register';
+    /*Attempts to post the password and email to the DB */
     axios.post(fullurl, values).then(response => {
         setGetPostMessage(response.data)
         console.log(response.data)
