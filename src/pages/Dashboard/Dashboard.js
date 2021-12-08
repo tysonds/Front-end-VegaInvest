@@ -13,7 +13,7 @@ import Keyportfacts from '../../components/Keyportfacts/Keyportfacts.jsx';
 import axios from 'axios';
 
 const Dashboard = () => {
-  const email=  useLocation().state.email;
+  const email=  useLocation().state.values.email;
   const [getMessage, setGetMessage] = useState({})
   useEffect(() => {
     var fullurl='http://127.0.0.1:5000/portfolios/pushParams/' + email;
