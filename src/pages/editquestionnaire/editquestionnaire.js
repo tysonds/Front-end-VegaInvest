@@ -6,7 +6,9 @@ const Editquestionnaire = () => {
 
 return (
  <div> 
+   {/* Page for editing the user's portfolio */}
    <LogoHeader />
+   {/* Form */}
    <Edituserqone />
     </div>
   );

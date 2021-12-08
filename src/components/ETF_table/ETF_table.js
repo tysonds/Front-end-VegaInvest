@@ -6,6 +6,7 @@ import axios from 'axios';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 
 const ETF_table = () => { 
+    /* Fetching the weights from the back-end and getting the user's email */
     const email=  useLocation().state.email;
     {/*const [getMessage, setGetMessage] = useState({})*/}
     const [getMessage, setGetMessage] = useState({
@@ -21,7 +22,7 @@ const ETF_table = () => {
           console.log(error)
         })
     }, [])
-    
+ /* This defines the ETF table */   
 const ETF = [
     {'ticker': "QCLN", description:"Tracks the First Trust NASDAQ Clean Edge Green Energy (alternative energy) Index.", weight: 0},
     {'ticker' : 'SOXX', description : 'The iShares Semiconductor ETF tracks the investment results of an index composed of U.S.listed equities in the semiconductor sector.',weight: 1}, 
@@ -50,7 +51,6 @@ const ETF = [
                         {'ticker': "ERTH", description:"Fund that seeks to track the investment results of MSCI Global Environment Select Index. The Fund generally will invest at least 90% of its total assets in the securities that comprise the Underlying Index. The Underlying Index is designed to maximize exposure to six themes that impact the environment.", weight: 24}
 
 ]
-
     const renderETF=(ETF,index)=> {
     return(
         <tr key={index}>
@@ -67,6 +67,7 @@ const ETF = [
             <div className="tb">
             <div className="table">
             <ReactBootStrap.Table style={{background: "#F1F1F1"}}>
+                {/* Defining a table */}
             <thead>
                 <tr>
                 <th>Ticker</th>
@@ -75,6 +76,7 @@ const ETF = [
                 </tr>
             </thead>
             <tbody>
+                {/* Filling in the values of the table from the dictionary */}
                 {ETF.map(renderETF)}
             </tbody>
             </ReactBootStrap.Table> 

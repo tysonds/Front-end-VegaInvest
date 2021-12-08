@@ -2,7 +2,7 @@ import './LoginPg.css';
 import LogoHeader from '../../components/LogoHeader/LogoHeader.js';
 import Login from '../../components/LoginForm/Login.js';
 
-{/*This is the Login Page */}
+/*This is the Login Page */
 function LoginPg() {
   return (
     <div className="LoginPg">

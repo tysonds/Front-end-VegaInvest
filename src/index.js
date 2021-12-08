@@ -14,6 +14,7 @@ ReactDOM.render(
   <React.StrictMode>
      <Router>
     <Routes>
+      {/* This defines all routes/pages */}
       <Route path="/" exact element={<LoginPg />} />
       <Route path="/createUser" exact element={<CreateUser />} />
       <Route path="/question" exact element={<Questionnaire />} />

@@ -9,6 +9,7 @@ import { Link, useNavigate, useLocation } from 'react-router-dom'
 
 
 const PortfolioSum = () => {
+/* Quering the back-end for information and obtaining the userID/email */
 const email = useLocation().state.email;
 let navigate = useNavigate();
 const NavQuest = () => {
@@ -20,10 +21,12 @@ const NavQuest = () => {
 
   return(
  <div className="Portsum"> 
+ {/* Header component */}
 <Porthead> </Porthead>
 <div className="PortsumContainer"> 
 <div className="PortsumTitle"> Portfolio Holdings </div>
 <div> 
+  {/* ETF Table component */}
 <ETF_table></ETF_table>
 </div>
 <div>

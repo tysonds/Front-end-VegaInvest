@@ -7,6 +7,7 @@ import react, { useState,useEffect } from 'react'
 import axios from 'axios';
 
 const Keyportfacts = () => {
+/* We need to revtrieve the email and other info from the backend*/
 const email=  useLocation().state.values.email;
 const [getMessage, setGetMessage] = useState({})
 
@@ -63,6 +64,7 @@ return (
         <strong> Risk Level: {getMessage.risk_appetite}</strong>
         </div>
         <div className="KeyRow">
+            {/* These buttons allow the user to navigate to other pages */}
             <Button id="KeyHoldBtn" onClick={NavPort} variant="primary"> View Portfolio Holdings </Button>
             <Button onClick={NavQuest} id="KeyDetBtn" variant="secondary"> Edit Portfolio Details </Button> 
         </div>

@@ -54,6 +54,7 @@ let navigate = useNavigate();
 }, [getPostMessage]) */}
 
 const HandlePortfolio = () => {
+  /*Following if statements ensure we aren't posting anything bizarre */
   if (isNaN(parseInt(pvalues.horizon))) {
     setErrormsg('Invalid Horizon!');
   }
@@ -80,6 +81,7 @@ const HandlePortfolio = () => {
   }
   else {
   console.log("you did it");
+  /*We navigat to the loading page */
   navigate("../loading", 
         {
           state: pvalues});

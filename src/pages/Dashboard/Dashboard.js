@@ -13,6 +13,7 @@ import Keyportfacts from '../../components/Keyportfacts/Keyportfacts.jsx';
 import axios from 'axios';
 
 const Dashboard = () => {
+{/* Quering data from MongoDB and loading the user email */}
   const email=  useLocation().state.values.email;
   const [getMessage, setGetMessage] = useState({})
   useEffect(() => {
@@ -25,7 +26,7 @@ const Dashboard = () => {
         console.log(error)
       })
   }, [])
-
+{/* computing the return */}
 const rtotal=getMessage.lastportval/getMessage.amount_invested;
   
 
@@ -37,8 +38,10 @@ const rtotal=getMessage.lastportval/getMessage.amount_invested;
    </div>
 
    <div className="Dashrowcontain">
+     {/* This is a graph component */}
       <div> <PortfolioGraph></PortfolioGraph> </div>
 
+{/* This is a table of statistics*/}
     <div className="Dashcolcontain">
       <div className="tb"> 
       <Table id="table" striped bordered hover size="sm">
@@ -72,11 +75,12 @@ const rtotal=getMessage.lastportval/getMessage.amount_invested;
   </tbody>
 </Table>
 </div>
-   
+   {/* This is the key portfolio facts components */}
 <Keyportfacts> </Keyportfacts>
 </div>
    </div>
    <div>
+     {/* Footer components */}
    <Footer> </Footer>
    </div>
   </div>
