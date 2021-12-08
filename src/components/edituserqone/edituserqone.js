@@ -7,6 +7,9 @@ import axios from 'axios';
 
 const Edituserqone = () => {
 const email=  useLocation().state.email;
+const values = {
+  email: email,
+}
 const [pvalues, setpValues] = useState(
     {
     amount_invest: "",
@@ -77,7 +80,7 @@ const HandlePortfolio = () => {
   */
   navigate("../dashboard", 
         {
-        state: {email}
+        state: {values}
         });
 }
 }
